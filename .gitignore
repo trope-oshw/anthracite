@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------- KiCad
+*-backups/
+**/*-backups/*.zip
+.history/
+*.kicad_prl
+fp-info-cache
+*.lck
+~*.lck
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
+*.000
+*-save.pro
+*-save.kicad_pcb
+_autosave-*
+~*
+*.tmp
+
+# Do NOT ignore these, despite what some upstream templates say:
+#   fp-lib-table, sym-lib-table  - needed to open the project elsewhere
+#   *.kicad_dru                  - design rules; KiCad docs say to commit it
+#   *.kicad_jobset               - the CI output configuration itself
+#   *.csv, *.xml, *.net          - BOM, pick-and-place, netlists
+#   *-cache*                     - needed to load legacy .sch files
+
+# ------------------------------------------------------------- Firmware
+build/
+cmake-build-*/
+*.o
+*.d
+*.su
+*.cyclo
+*.map
+*.list
+
+# STM32CubeIDE / Eclipse
+.settings/
+.metadata/
+.cproject
+.project
+Debug/
+Release/
+
+# ------------------------------------------------------------- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ------------------------------------------------------------------ OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------------------------------------------- CI artefacts
+/Generated/

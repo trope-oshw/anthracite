@@ -1,0 +1,50 @@
+# Keep line endings as LF in the repository, whatever the working platform.
+# Without this, a Windows checkout commits CRLF and every file looks changed
+# when the same project is opened on macOS or Linux.
+* text=auto eol=lf
+
+# ---------------------------------------------------------------- KiCad
+*.kicad_pro     text eol=lf
+*.kicad_sch     text eol=lf
+*.kicad_pcb     text eol=lf
+*.kicad_dru     text eol=lf
+*.kicad_sym     text eol=lf
+*.kicad_mod     text eol=lf
+*.kicad_jobset  text eol=lf
+*.kicad_wks     text eol=lf
+fp-lib-table    text eol=lf
+sym-lib-table   text eol=lf
+
+# ------------------------------------------------------------- Firmware
+*.c    text eol=lf
+*.h    text eol=lf
+*.s    text eol=lf
+*.ld   text eol=lf
+*.ioc  text eol=lf
+*.cmake text eol=lf
+
+# -------------------------------------------------- Documentation, data
+*.md   text eol=lf
+*.txt  text eol=lf
+*.toml text eol=lf
+*.csv  text eol=lf
+*.json text eol=lf
+
+# ----------------------------------------------------------------- Binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.pdf   binary
+*.zip   binary
+*.step  binary
+*.stp   binary
+*.STEP  binary
+*.igs   binary
+*.IGS   binary
+*.f3d   binary
+*.stl   binary
+*.elf   binary
+*.bin   binary
+
+# DXF requires CRLF by specification; do not let git rewrite it.
+*.dxf   binary

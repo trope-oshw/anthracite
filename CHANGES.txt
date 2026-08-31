@@ -1,0 +1,17 @@
+This file is the place to record modifications, as required by
+CERN-OHL-S v2 subsection 3.3(b):
+
+    "add a Notice to the modified Covered Source stating that You have
+     modified it, with the date and a brief description of how You
+     modified it"
+
+If you modify anything in this repository and convey the result, add a
+line here with the date and what you changed. For example:
+
+    26 April 2026: Replaced the tone stack with a Baxandall network and
+                   moved C21 to the input side of the volume control.
+
+Modifications by the original licensor are recorded in CHANGELOG.md
+instead. This file is for downstream modifications.
+
+-------------------------------------------------------------------------

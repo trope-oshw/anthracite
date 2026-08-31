@@ -1,0 +1,34 @@
+version = 1
+
+# Licensing declarations for files that cannot carry an SPDX header.
+#
+# KiCad files are excluded from header-based declaration on purpose:
+#   - .kicad_pro is JSON and cannot hold comments
+#   - .kicad_sch / .kicad_pcb are rewritten by KiCad on save, which drops
+#     unknown tokens
+# so the whole hardware/ and enclosure/ trees are declared here instead.
+#
+# `precedence` is left at its default ("closest"), so an SPDX header inside
+# a file always wins over these directory-level declarations. That is what
+# keeps third-party firmware sources (ST HAL: BSD-3-Clause, ARM CMSIS:
+# Apache-2.0) correctly attributed without listing them individually.
+
+[[annotations]]
+path = "hardware/**"
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "CERN-OHL-S-2.0"
+
+[[annotations]]
+path = "enclosure/**"
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "CERN-OHL-S-2.0"
+
+[[annotations]]
+path = "firmware/**"
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["docs/**", "README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md"]
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
