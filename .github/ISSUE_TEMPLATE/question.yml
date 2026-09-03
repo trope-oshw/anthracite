@@ -1,0 +1,29 @@
+name: Question about the circuit or the design
+description: Ask why something is the way it is
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions are welcome and the answer usually helps the next person too,
+        which is why issues are preferred over email.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: |
+        If it is about a specific part of the circuit, naming the reference
+        designator (R12, U3, …) or the sheet makes it much easier to answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What you are trying to do
+      description: |
+        Optional, but it often changes the answer. Modifying the design,
+        reusing part of it, or just reading it are different situations.
+    validations:
+      required: false

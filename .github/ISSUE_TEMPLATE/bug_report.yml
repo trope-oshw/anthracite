@@ -1,0 +1,64 @@
+name: Something does not work
+description: The pedal, the firmware, or the design files behave differently from the documentation
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The two fields below save the most
+        back-and-forth, so please fill them in even if they seem irrelevant —
+        a lot of behaviour depends on which board and firmware you have.
+
+  - type: input
+    id: board
+    attributes:
+      label: Board version
+      description: Silkscreened on the PCB, e.g. `ANTHRACITE V1.0`. If you built it yourself from these files, say which release you used.
+      placeholder: V1.0
+    validations:
+      required: true
+
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      description: If you are not sure, say so — that is a useful answer too.
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you observe, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: |
+        Control positions, DIP switch settings, what is connected, and what you
+        did. If it depends on a MIDI message, include the channel and CC number.
+    validations:
+      required: true
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: Power supply and signal chain
+      description: |
+        Supply voltage and polarity, what feeds the input, what the output
+        drives. Many symptoms turn out to be supply or impedance related.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: assembled
+    attributes:
+      label: Is this a unit built by Trope, or one you built?
+      options:
+        - label: Built and sold by Trope
+        - label: I built it from these design files

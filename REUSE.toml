@@ -29,6 +29,6 @@ SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "GPL-3.0-or-later"
 
 [[annotations]]
-path = ["docs/**", "README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md"]
+path = ["docs/**", "README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
