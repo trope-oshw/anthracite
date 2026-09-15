@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "anthracite") (type "KiCad") (uri "${KIPRJMOD}/libs/anthracite.pretty") (options "") (descr "Footprints used by this project"))
+)

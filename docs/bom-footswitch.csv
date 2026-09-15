@@ -1,0 +1,3 @@
+Assembly,References,Qty,Value,Footprint,Description,Tolerance,Voltage,Dielectric,Power,Manufacturer,MPN,LCSC,Datasheet
+Hand,J1,1,Conn_01x03_Socket,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,"Generic connector, single row, 01x03, script generated",,,,,JST,B3B-PH-K-S(LF)(SN),,
+Hand,SW1,1,SW_DPDT_x2,Alpha_Foot_Switch_DPDT,"Momentary footswitch, any type (both poles are wired in parallel); the built unit used an Alpha momentary DPDT footswitch (e.g. Sakuraya Denkiten fs85_i-5)",,,,,Alpha,,,

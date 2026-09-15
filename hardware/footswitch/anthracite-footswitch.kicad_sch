@@ -1,0 +1,1013 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "52fee50e-2ce2-49ba-a0fc-367b3dec68a9")
+	(paper "A4")
+	(title_block
+		(title "Anthracite Schematic (Footswitch)")
+		(date "2026-09-15")
+		(rev "v1.0")
+		(company "Yamamoto Circuit Design")
+		(comment 1 "Copyright 2026 Hayata Yamamoto")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+		(comment 3 "Source: github.com/trope-oshw/anthracite")
+	)
+	(lib_symbols
+		(symbol "Connector:Conn_01x03_Socket"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03_Socket"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_Socket_1_1"
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 2.032)
+					(mid -0.5058 2.54)
+					(end 0 3.048)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_DPDT_x2"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_DPDT_x2"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, dual pole double throw, separate symbols"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch dual-pole double-throw DPDT spdt ON-ON"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SW*DPDT*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_DPDT_x2_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_DPDT_x2_0_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.5748 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_DPDT_x2_1_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_DPDT_x2_2_1"
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 57.15 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0cad84a7-8ed1-4d36-b50d-f79bd973a138")
+	)
+	(junction
+		(at 59.69 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9859baf2-6bbf-412d-b11e-52a0d6ddf0ea")
+	)
+	(junction
+		(at 62.23 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e662df29-47ca-4cd2-ae34-97a7b2ee5d62")
+	)
+	(wire
+		(pts
+			(xy 46.99 50.8) (xy 57.15 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2523f2f3-46c0-4edf-8012-2b781dba31f8")
+	)
+	(wire
+		(pts
+			(xy 72.39 62.23) (xy 72.39 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "252e52f8-8bf4-4a5a-919b-c08cadd564ff")
+	)
+	(wire
+		(pts
+			(xy 62.23 46.99) (xy 74.93 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cdfa73a-3be0-4742-b6c6-c00dafb0221e")
+	)
+	(wire
+		(pts
+			(xy 49.53 64.77) (xy 49.53 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a89644d-1fbc-42f4-94e4-b1f611687859")
+	)
+	(wire
+		(pts
+			(xy 49.53 64.77) (xy 59.69 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "775c6d8c-34fd-4a0f-b5a6-ad80815c1c9d")
+	)
+	(wire
+		(pts
+			(xy 52.07 46.99) (xy 62.23 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d3d3305-87ff-4785-a43e-1fd81d4d2a91")
+	)
+	(wire
+		(pts
+			(xy 46.99 50.8) (xy 46.99 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9957e992-d578-4848-9c8f-c3b85f8b1c35")
+	)
+	(wire
+		(pts
+			(xy 59.69 64.77) (xy 72.39 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4f16d9c-c1b9-4f82-ad7e-c0ac37182a0d")
+	)
+	(wire
+		(pts
+			(xy 57.15 50.8) (xy 57.15 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3d852cf-1e10-42aa-a95f-0ac229b7cfc5")
+	)
+	(wire
+		(pts
+			(xy 62.23 69.85) (xy 62.23 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca155d15-b1bb-4749-8aae-92317fb6d9e3")
+	)
+	(wire
+		(pts
+			(xy 57.15 50.8) (xy 69.85 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d392464f-3a4c-4adc-a24c-5d1feb63fea4")
+	)
+	(wire
+		(pts
+			(xy 52.07 52.07) (xy 52.07 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5248387-3545-4c5e-8cb3-2b41d7854750")
+	)
+	(wire
+		(pts
+			(xy 74.93 46.99) (xy 74.93 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e72ef624-21e9-49a1-90e5-b6fe665cdb9d")
+	)
+	(wire
+		(pts
+			(xy 69.85 52.07) (xy 69.85 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7cdf415-3213-4bb7-940f-3d7742e31552")
+	)
+	(wire
+		(pts
+			(xy 59.69 69.85) (xy 59.69 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7aca107-9f0e-45c3-971e-83c4480c172e")
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Socket")
+		(at 59.69 74.93 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cf584f2-7414-4315-9950-0fa7540909ab")
+		(property "Reference" "J1"
+			(at 59.69 77.47 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x03_Socket"
+			(at 59.69 80.01 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical"
+			(at 59.69 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 59.69 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "JST"
+			(at 59.69 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "B3B-PH-K-S(LF)(SN)"
+			(at 59.69 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "381a2283-9ef6-4cde-9fde-2d3808092ab1")
+		)
+		(pin "1"
+			(uuid "61122a54-d789-4d03-8e4f-649f90444a9e")
+		)
+		(pin "2"
+			(uuid "ff18a044-3785-4f32-8cf4-f541631b4ea9")
+		)
+		(instances
+			(project "anthracite-footswitch"
+				(path "/52fee50e-2ce2-49ba-a0fc-367b3dec68a9"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DPDT_x2")
+		(at 49.53 57.15 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b5ef585-b663-49ec-ac53-94ef5f248ac4")
+		(property "Reference" "SW1"
+			(at 44.704 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_DPDT_x2"
+			(at 44.704 58.42 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "anthracite:Alpha_Foot_Switch_DPDT"
+			(at 49.53 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Momentary footswitch, any type (both poles are wired in parallel); the built unit used an Alpha momentary DPDT footswitch (e.g. Sakuraya Denkiten fs85_i-5)"
+			(at 49.53 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Alpha"
+			(at 49.53 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 49.53 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "eee70405-55d2-4fb7-8715-70de7954c5c9")
+		)
+		(pin "3"
+			(uuid "9270b02d-c456-494f-a804-15f0794313c2")
+		)
+		(pin "5"
+			(uuid "a0246589-465e-44ee-ae63-a5b09dec4146")
+		)
+		(pin "2"
+			(uuid "3d9aa66b-9acb-4fbf-a018-514e747c320e")
+		)
+		(pin "4"
+			(uuid "d49ffa60-342e-4208-9f7f-8a5638233b27")
+		)
+		(pin "1"
+			(uuid "741fb03c-fcb8-49c1-b770-3b2e4ab01ea9")
+		)
+		(instances
+			(project "anthracite-footswitch"
+				(path "/52fee50e-2ce2-49ba-a0fc-367b3dec68a9"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DPDT_x2")
+		(at 72.39 57.15 90)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5a1bf15-3a10-4c7f-a06d-d729aaf003c6")
+		(property "Reference" "SW1"
+			(at 77.47 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SW_DPDT_x2"
+			(at 77.47 58.4199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "anthracite:Alpha_Foot_Switch_DPDT"
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Momentary footswitch, any type (both poles are wired in parallel); the built unit used an Alpha momentary DPDT footswitch (e.g. Sakuraya Denkiten fs85_i-5)"
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Alpha"
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "eee70405-55d2-4fb7-8715-70de7954c5ca")
+		)
+		(pin "3"
+			(uuid "9270b02d-c456-494f-a804-15f0794313c3")
+		)
+		(pin "5"
+			(uuid "a0246589-465e-44ee-ae63-a5b09dec4147")
+		)
+		(pin "2"
+			(uuid "3d9aa66b-9acb-4fbf-a018-514e747c320f")
+		)
+		(pin "4"
+			(uuid "d49ffa60-342e-4208-9f7f-8a5638233b28")
+		)
+		(pin "1"
+			(uuid "741fb03c-fcb8-49c1-b770-3b2e4ab01eaa")
+		)
+		(instances
+			(project "anthracite-footswitch"
+				(path "/52fee50e-2ce2-49ba-a0fc-367b3dec68a9"
+					(reference "SW1")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

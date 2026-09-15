@@ -1,0 +1,50 @@
+Assembly,References,Qty,Value,Footprint,Description,Tolerance,Voltage,Dielectric,Power,Manufacturer,MPN,LCSC,Datasheet
+PCBA,"C101, C103, C112, C113, C115, C116, C117, C118, C120",9,1u,C_0805_2012Metric,Unpolarized capacitor,10%,50V,X7R,,Samsung Electro-Mechanics,CL21B105KBFNNNE,C28323,
+PCBA,"C102, C119",2,47u,CP_Rubycon_35TZV100M6.3X8,Polarized capacitor,20%,50V,electrolytic,,Rubycon,50TZV47M6.3X8,C88734,
+PCBA,"C104, C109, C114, C121",4,100u,CP_Rubycon_35TZV100M6.3X8,Polarized capacitor,20%,35V,electrolytic,,Rubycon,35TZV100M6.3X8,C88744,
+PCBA,C105,1,10u,C_0805_2012Metric,Unpolarized capacitor,10%,25V,X5R,,,,C15850,
+PCBA,"C106, C110",2,0.47u,C_0603_1608Metric,Unpolarized capacitor,10%,25V,X7R,,,,C1623,
+PCBA,"C107, C111",2,0.1u,C_0805_2012Metric,Unpolarized capacitor,10%,50V,X7R,,,,C49678,
+PCBA,"C122, C126",2,4.7u,C_0805_2012Metric,Unpolarized capacitor,10%,25V,X5R,,,,C1779,
+PCBA,"C123, C124, C125, C127, C128, C129, C130, C131, C132, C133, C134, C135, C136, C137, C138, C140, C142, C143, C144",19,0.1u,C_0603_1608Metric,Unpolarized capacitor,10%,50V,X7R,,,,C14663,
+PCBA,"C139, C141",2,100p,C_0603_1608Metric,Unpolarized capacitor,5%,50V,C0G,,,,C14858,
+PCBA,"C201, C301, C401, C501, C601, C701, C801, C901, C1001",9,0.022u,C_0603_1608Metric,Unpolarized capacitor,10%,50V,X7R,,,,C21122,
+PCBA,"D101, D103, D106, D108, D110, D111, D112, D113, D114, D115, D201, D301, D401, D501, D601, D701, D801, D901, D1001",19,LED(RED),D_0603_1608Metric_Name,Light emitting diode,,,,,Hubei KENTO Elec,KT-0603R,C2286,
+PCBA,"D102, D104, D105, D107",4,1N5819WS,D_SOD-323,"40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323",,,,,Guangdong Hottech,1N5819WS,C191023,https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf
+PCBA,D109,1,BAV99,SOT-23,"BAV99 High-speed switching diodes, SOT-23",,,,,Nexperia,"BAV99,215",C2500,https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf
+PCBA,FB101,1,BLM18PG121SN1D,L_0603_1608Metric,Ferrite bead,25%,,,,,,C14709,
+PCBA,"Q101, Q103",2,SS8050,SOT-23,NPN BJT,,,,,JSCJ,SS8050(RANGE:200-350),C2150,https://www.lcsc.com/datasheet/lcsc_datasheet_2303221100_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--SS8050-RANGE-200-350_C2150.pdf
+PCBA,Q102,1,SS8550 Y2,SOT-23,PNP BJT,,,,,JSCJ,SS8550 Y2(RANGE:200-350),C8542,https://www.lcsc.com/datasheet/lcsc_datasheet_1810161212_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--SS8550-Y2-RANGE-200-350_C8542.pdf
+PCBA,"Q201, Q301, Q401, Q501, Q601, Q701, Q801, Q901, Q1001",9,MMDT2227,SOT-363_SC-70-6,"Dual NPN/PNP transistor, 6 pin package.  NPN[C, B, E]=[6, 2, 1]. PNP[C, B, E]=[3, 5, 4].",,,,,R+O,MMDT2227,C41375117,https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf
+PCBA,"R101, R107, R113",3,2.2k,R_0603_1608Metric,Resistor,1%,,,,,,C4190,
+PCBA,"R102, R108",2,6.8k,R_0603_1608Metric,Resistor,1%,,,,,,C23212,
+PCBA,"R103, R133, R144",3,3k3,R_0402_1005Metric,Resistor,1%,,,,,,C25890,https://jlcpcb.com/partdetail/C25890
+PCBA,"R104, R134, R135, R136, R137",5,1k5,R_0402_1005Metric,Resistor,1%,,,,,,C25867,https://jlcpcb.com/partdetail/C25867
+PCBA,"R105, R106, R109, R119, R120, R121, R122, R125, R126, R138, R141, R202, R203, R302, R303, R402, R403, R502, R503, R602, R603, R702, R703, R802, R803, R902, R903, R1002, R1003",29,10k,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25744,https://jlcpcb.com/partdetail/C25744
+PCBA,R110,1,10k,R_0603_1608Metric,Resistor,1%,,,,,,C25804,
+PCBA,R111,1,3.3k,R_0603_1608Metric,Resistor,1%,,,,,,C22978,
+PCBA,R112,1,470,R_0603_1608Metric,Resistor,1%,,,,,,C23179,
+PCBA,"R114, R123",2,33,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25105,https://jlcpcb.com/partdetail/C25105
+PCBA,"R115, R116, R117, R118, R127, R130, R139, R140, R142, R143, R201, R301, R401, R501, R601, R701, R801, R901, R1001",19,3k3,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25890,https://jlcpcb.com/partdetail/C25890
+PCBA,"R124, R129",2,1k,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C11702,https://jlcpcb.com/partdetail/C11702
+PCBA,R128,1,220,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25091,https://jlcpcb.com/partdetail/C25091
+PCBA,"R131, R132",2,120,R_0402_1005Metric_MiniFont,Resistor,1%,,,1/16W,,,C25079,https://jlcpcb.com/partdetail/C25079
+PCBA,"R204, R205, R207, R304, R305, R307, R404, R405, R407, R504, R505, R507, R604, R605, R607, R704, R705, R707, R804, R805, R807, R904, R905, R907, R1004, R1005, R1007",27,22k,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25768,
+PCBA,"R206, R306, R406, R506, R606, R706, R806, R906, R1006",9,33k,R_0402_1005Metric_MiniFont,Resistor,1%,,,,,,C25779,
+PCBA,"SW101, SW103",2,SW_SPST,TS1088AR02016,Single Pole Single Throw (SPST) switch,,,,,XUNPU,TS-1088-AR02016,C720477,
+PCBA,"U101, U102",2,L78L05_SOT89,SOT-89-3,"Positive 100mA 30V Linear Regulator, Fixed Output 5V, SOT-89",,,,,UTC,78L05G-AB3-R,C71136,https://www.unisonic.com.tw/datasheet/78LXX.pdf
+PCBA,U103,1,XC6206P332MR-G,SOT-23-3,"Positive 60-250mA Low Dropout Regulator, Fixed Output, SOT-23",,,,,Torex,XC6206P332MR-G,C5446,https://www.torexsemi.com/file/xc6206/XC6206.pdf
+PCBA,U105,1,STM32F030C8T6,LQFP-48_7x7mm_P0.5mm,"STMicroelectronics Arm Cortex-M0 MCU, 64KB flash, 8KB RAM, 48 MHz, 2.4-3.6V, 39 GPIO, LQFP48",,,,,STMicro,STM32F030C8T6,C23922,https://www.st.com/resource/en/datasheet/stm32f030c8.pdf
+PCBA,U106,1,M24C64-RMN6TP,SOIC-8_3.9x4.9mm_P1.27mm,"64Kb serial FRAM nonvolatile Memory, SOIC-8",,,,,STMicro,M24C64-RMN6TP,C79988,https://www.st.com/ja/memories/m24c64-r.html
+PCBA,U107,1,SN74HCT04DR,SOIC-14_3.9x8.7mm_P1.27mm,"Hex Inverter, Input are TTL-Voltage compatible",,,,,TI,SN74HCT04DR,C6766,https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf
+PCBA,"U108, U109, U110",3,SN74LVC1G66DCKR,SOT-353_SC-70-5,"SPST Analog Switch, 1.08V to 5.5V Supply, Normally OFF",,,,,TI,SN74LVC1G66DCKR,C113518,https://www.ti.com/lit/ds/symlink/sn74lvc1g66.pdf
+Hand,J101,1,Conn_ST_STDC14,STDC14_2x07_P1.27mm_Vertical_ST-LINKV3,"ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART",,,,,hanxia,HX JN1.27-2x7P ZZ H4.9,,https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf
+Hand,J102,1,B3B-PH-K-S,JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,"Generic connector, single row, 01x03, script generated",,,,,JST,B3B-PH-K-S(LF)(SN),,
+Hand,J103,1,PH-2x10SG,PinHeader_2x10_P2.54mm_Vertical,"Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Useconn,PH-2x10SG,,
+Hand,J104,1,MJ-8435,MJ-8435,"Audio Jack, 3 Poles (Stereo / TRS)",,,,,Maru-Shin,MJ-8435,,
+Hand,J105,1,PH-2x4SG,PinHeader_2x04_P2.54mm_Vertical,"Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Chang Enn,PH-2x4SG,,https://akizukidenshi.com/catalog/g/g116793/
+Hand,J106,1,PH11-2x10SAG,PinHeader_2x10_P1.27mm_Vertical,"Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Chang Enn,PH11-2x10SAG,,https://akizukidenshi.com/catalog/g/g113801/
+Hand,J107,1,B6B-ZR-3.4(LF)(SN),JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical,"Generic connector, single row, 01x06, script generated",,,,,JST,B6B-ZR-3.4(LF)(SN),,https://akizukidenshi.com/catalog/g/g114159/
+Hand,SW102,1,KSD42,DIP-8_W7.62mm,"4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol",,,,,OTAX,KSD42,,https://akizukidenshi.com/catalog/g/g108923/
+Hand,U104,1,NJW4191M,DMP-8_P1.27mm_HandSolder,"Inverting charge pump IC, 4.7V to 17V Supply, 55mA max, 300kHz",,,,,Nisshinbo,NJW4191M,,https://www.nisshinbo-microdevices.co.jp/ja/pdf/datasheet/NJW4191_J.pdf
+DNP,C108,1,10u,C_0805_2012Metric,Unpolarized capacitor,10%,50V,X5R,,Murata,GRM21BR61H106KE43L,C440198,

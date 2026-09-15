@@ -1,0 +1,5 @@
+(version 1)
+(rule "no_tall_components_in_low_height_zone"
+  (condition "A.hasComponentClass('tall') && A.intersectsArea('low_height_zone')")
+  (constraint disallow footprint)
+)

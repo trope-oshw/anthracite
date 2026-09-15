@@ -1,0 +1,210 @@
+(footprint "TS1088AR02016"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "XUNPU TS-1088-AR02016 tactile switch, SMD, 3.9 x 3.0 mm body, SPST; pad size follows the boards already built (maker land 1.05 x 2.0 mm, 3.4 mm gap), https://datasheet.lcsc.com/datasheet/pdf/0475ac02febf455ca9ddcfb380b0df0d.pdf?productCode=C720477")
+	(tags "tactile tact push button SMD XUNPU TS-1088")
+	(property "Reference" "REF**"
+		(at 0 -2.75 0)
+		(layer "F.SilkS")
+		(uuid "4eb5e6a5-cda8-5e92-a860-963d05ae402e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TS1088AR02016"
+		(at 0 2.75 0)
+		(layer "F.Fab")
+		(uuid "613384fb-208a-593f-ae2d-5ab6f091d23e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "670960c7-f993-5590-a170-cc615c66053c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.191)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d41a83a6-b6bd-5a53-b98f-6d2c93c6db19")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.191)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.9 -1.61)
+		(end 2.06 -1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dcd28574-6ba2-5a1f-9e37-37465e967cb2")
+	)
+	(fp_line
+		(start -2.06 -1.61)
+		(end -2.06 -1.165)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a657f06d-4c93-584e-be36-684028d4a91d")
+	)
+	(fp_line
+		(start -2.06 1.61)
+		(end -2.06 1.165)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6175c8e9-3ce5-5f60-b1d3-a041b0413b80")
+	)
+	(fp_line
+		(start -2.06 1.61)
+		(end 2.06 1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e332f1b5-fc6b-5eb2-9a7d-64f2e5789b63")
+	)
+	(fp_line
+		(start 2.06 -1.61)
+		(end 2.06 -1.165)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d83ba1de-e67d-5ce3-aea1-0525f36fe64c")
+	)
+	(fp_line
+		(start 2.06 1.61)
+		(end 2.06 1.165)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2a471ff7-3694-5d0d-a3d8-c3b85308f91b")
+	)
+	(fp_poly
+		(pts
+			(xy -3 -1.75) (xy 3 -1.75) (xy 3 1.75) (xy -3 1.75)
+		)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "84186f61-eeff-58ad-831f-2f38ed10484c")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.9 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "5c146c6a-ccec-59a9-9d4f-ec1e01ab107a")
+	)
+	(fp_poly
+		(pts
+			(xy -1.95 -0.7) (xy -2.5 -0.7) (xy -2.5 0.7) (xy -1.95 0.7)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "0c1d501f-f1c5-5558-bce6-4c5dd8a13de9")
+	)
+	(fp_poly
+		(pts
+			(xy 1.95 -0.7) (xy 2.5 -0.7) (xy 2.5 0.7) (xy 1.95 0.7)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "da50369f-5e02-543c-883c-1363731793da")
+	)
+	(fp_poly
+		(pts
+			(xy -1.35 -1.5) (xy 1.95 -1.5) (xy 1.95 1.5) (xy -1.95 1.5) (xy -1.95 -0.9)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "5ff8e7b9-50cc-5f82-8216-517cf70b311d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "80d60a16-62fd-5ec3-86c1-c4b01f5d917d")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.075 0)
+		(size 1.35 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "70a63847-575a-544f-9283-b5f3e360e8e8")
+	)
+	(pad "2" smd rect
+		(at 2.075 0)
+		(size 1.35 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6898a5ed-2882-5a8a-9ff2-a111dd51f207")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_TS-1088-xR020.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

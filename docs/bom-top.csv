@@ -1,0 +1,70 @@
+Assembly,References,Qty,Value,Footprint,Description,Tolerance,Voltage,Dielectric,Power,Manufacturer,MPN,LCSC,Datasheet
+PCBA,C1,1,1u,C_0805_2012Metric,Unpolarized capacitor,10%,50V,X7R,,Samsung Electro-Mechanics,CL21B105KBFNNNE,C28323,
+PCBA,"C3, C8, C9, C10",4,10uF,C_0805_2012Metric,Unpolarized capacitor,10%,25V,X5R,,Samsung Electro-Mechanics,CL21A106KAYNNNE,C15850,
+PCBA,"C4, C11, C12, C15, C18, C20, C21, C22, C26, C29, C30, C31, C32, C36, C37, C42, C43, C48",18,0.1u,C_0603_1608Metric,Unpolarized capacitor,10%,50V,X7R,,,,C14663,
+PCBA,C5,1,470p,C_0603_1608Metric,Unpolarized capacitor,10%,50V,X7R,,,,C1620,
+PCBA,C6,1,4.7u,C_0805_2012Metric,Unpolarized capacitor,10%,25V,X5R,,,,C1779,
+PCBA,"C14, C39, C40",3,0.01u,C_0603_1608Metric,Unpolarized capacitor,5%,50V,C0G,,Murata,GRM1885C1H103JA01D,C85973,
+PCBA,"C16, C17, C19",3,2200p,C_0805_2012Metric,Unpolarized capacitor,5%,50V,C0G,,,,C28260,
+PCBA,C24,1,0.047u,C_0805_2012Metric,Unpolarized capacitor,10%,50V,X7R,,,,C53134,
+PCBA,C33,1,47p,C_0603_1608Metric,Unpolarized capacitor,5%,50V,C0G,,,,C1671,
+PCBA,"C34, C38, C45, C50",4,10u,CP_Elec_4x5.4,Polarized capacitor,20%,16V,electrolytic,,Panasonic,EEE1CA100SR,C178496,
+PCBA,C35,1,100p,C_0603_1608Metric,Unpolarized capacitor,5%,50V,C0G,,,,C14858,
+PCBA,C44,1,220p,C_0603_1608Metric,Unpolarized capacitor,10%,50V,X7R,,,,C1603,
+PCBA,C46,1,33p,C_0603_1608Metric,Unpolarized capacitor,5%,50V,C0G,,,,C1663,
+PCBA,D3,1,BZT52C15,D_SOD-123,"Zener diode, VZ = 15V",,,,,R+O,BZT52C15,C19077412,
+PCBA,"D4, D9, D10, D11, D14",5,LED(RED),D_0603_1608Metric_Name,Light emitting diode,,,,,Hubei KENTO Elec,KT-0603R,C2286,
+PCBA,D5,1,BAT54S,SOT-23,"Vr 30V, If 200mA, Dual schottky barrier diode, in series, SOT-23",,,,,R+O,BAT54S,C7420333,https://www.diodes.com/assets/Datasheets/ds11005.pdf
+PCBA,"D6, D7, D8",3,1N5819WS,D_SOD-323,"40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323",,,,,Guangdong Hottech,1N5819WS,C191023,https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf
+PCBA,"D12, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29",16,1N4148WS,D_SOD-323,"75V 0.15A Fast switching Diode, SOD-323",,,,,JSCJ,1N4148WS,C2128,https://www.vishay.com/docs/85751/1n4148ws.pdf
+PCBA,Q2,1,SS8550 Y2,SOT-23,PNP BJT,,,,,JSCJ,SS8550 Y2(RANGE:200-350),C8542,https://www.lcsc.com/datasheet/lcsc_datasheet_1810161212_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--SS8550-Y2-RANGE-200-350_C8542.pdf
+PCBA,"Q4, Q5, Q6, Q8, Q9, Q10, Q11, Q14, Q15, Q16, Q17",11,2SK880-GR,SOT-323_SC-70,N-JFET transistor,,,,,Toshiba,2SK880-GR,C7469759,
+PCBA,"Q7, Q18",2,S9013-J3,SOT-23,NPN BJT,,,,,JSCJ,S9013 J3(RANGE:200-350),C6749,https://www.lcsc.com/datasheet/lcsc_datasheet_1810051504_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--S9013-J3-RANGE-200-350_C6749.pdf
+PCBA,"R1, R40, R61, R93",4,100k,R_0603_1608Metric,Resistor,1%,,,,,,C25803,
+PCBA,"R2, R28",2,33k,R_0603_1608Metric,Resistor,1%,,,,,,C4216,
+PCBA,"R3, R27, R49, R83, R92",5,10k,R_0603_1608Metric,Resistor,1%,,,,,,C25804,https://jlcpcb.com/partdetail/C25804
+PCBA,"R4, R87, R88",3,470k,R_0603_1608Metric,Resistor,1%,,,,,,C23178,
+PCBA,"R5, R37, R73, R74, R85",5,47k,R_0603_1608Metric,Resistor,1%,,,,,,C25819,https://jlcpcb.com/partdetail/C25819
+PCBA,"R6, R12, R14, R45",4,6k8,R_0603_1608Metric,Resistor,1%,,,,,,C23212,https://jlcpcb.com/partdetail/C23212
+PCBA,"R7, R23, R58",3,22k,R_0603_1608Metric,Resistor,1%,,,,,,C31850,https://jlcpcb.com/partdetail/C31850
+PCBA,"R8, R46, R76, R78",4,1k5,R_0603_1608Metric,Resistor,1%,,,,,,C22843,https://jlcpcb.com/partdetail/C22843
+PCBA,"R9, R16, R59, R60",4,4k7,R_0603_1608Metric,Resistor,1%,,,,,,C23162,https://jlcpcb.com/partdetail/C23162
+PCBA,R10,1,4.7,R_0603_1608Metric,Resistor,1%,,,,,,C23164,
+PCBA,R11,1,22,R_0603_1608Metric,Resistor,1%,,,,,,C23345,
+PCBA,"R13, R19, R36, R56, R57, R84",6,3k3,R_0603_1608Metric,Resistor,1%,,,,,,C22978,https://jlcpcb.com/partdetail/C22978
+PCBA,R15,1,220,R_0603_1608Metric,Resistor,1%,,,,,,C22962,
+PCBA,R17,1,33,R_0603_1608Metric,Resistor,1%,,,,,,C23140,
+PCBA,"R18, R20, R50, R53, R62, R67, R71, R75, R77, R94",10,1k,R_0603_1608Metric,Resistor,1%,,,,,,C21190,https://jlcpcb.com/partdetail/C21190
+PCBA,"R21, R26, R31, R35, R39, R43, R48, R52, R65, R70, R72",11,1M,R_0603_1608Metric,Resistor,1%,,,,,,C22935,
+PCBA,"R22, R79, R80",3,2k2,R_0603_1608Metric,Resistor,1%,,,,,,C4190,
+PCBA,"R24, R29, R33, R38, R41, R47, R51, R64, R69, R86",10,100M,R_0603_1608Metric,Resistor,5%,,,,,,C422892,
+PCBA,"R25, R30, R34, R42, R81, R89, R91",7,220k,R_0603_1608Metric,Resistor,1%,,,,,,C22961,
+PCBA,"R32, R44",2,56k,R_0603_1608Metric,Resistor,1%,,,,,,C23206,
+PCBA,R54,1,330k,R_0603_1608Metric,Resistor,1%,,,,,,C23137,
+PCBA,R55,1,150k,R_0603_1608Metric,Resistor,1%,,,,,,C22807,
+PCBA,"R63, R66, R68, R90",4,15k,R_0603_1608Metric,Resistor,1%,,,,,,C22809,https://jlcpcb.com/partdetail/C22809
+PCBA,R82,1,470,R_0603_1608Metric,Resistor,1%,,,,,,C23179,
+PCBA,U1,1,MIC5205YM5,SOT-23-5,"150mA low dropout linear regulator, adjustable output, SOT-23-5",,,,,Microchip,MIC5205YM5,C412820,http://ww1.microchip.com/downloads/en/DeviceDoc/20005785A.pdf
+PCBA,U3,1,TL072CDT,SOIC-8_3.9x4.9mm_P1.27mm,"Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8",,,,,STMicro,TL072CDT,C6961,http://www.ti.com/lit/ds/symlink/tl071.pdf
+Hand,C2,1,470u,CP_Radial_D10.0mm_P5.00mm,Polarized capacitor,20%,25V,Polymer electrolytic,,Rubycon,25PZJ470M10X9,,
+Hand,C7,1,100u,CP_Radial_D6.3mm_P2.50mm,Polarized capacitor,20%,16V,Polymer electrolytic,,Panasonic,16SEPC100M,,
+Hand,"C13, C23, C47, C49",4,1u,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,PMLCAP,20%,25V,film,,Rubycon,25NS105MA23216,,
+Hand,"C25, C27",2,10u,C_1812_4532Metric_Pad1.57x3.40mm_HandSolder,PMLCAP,20%,16V,film,,Rubycon,16MU106MC44532,,
+Hand,"C28, C41",2,0.047u,C_1206_3216Metric_Pad1.33x1.80mm_HandSolder,Unpolarized capacitor,5%,50V,C0G,,Murata,GRM31M5C1H473JA01L,C21812,
+Hand,D13,1,LED_PL9823-F5,LED_D5.0mm-4_RGB_Wide_Pins,"RGB LED, Multicolor",,,,,Shenzhen Rita Lighting,PL9823-F5,,https://akizukidenshi.com/catalog/g/g108411/
+Hand,J1,1,Barrel_Jack_Switch,MJ-179PH_Edge,DC Barrel Jack with an internal switch,,,,,Maru-Shin,MJ-179PH,,
+Hand,J2,1,MJ-8435,MJ-8435,"Audio Jack, 3 Poles (Stereo / TRS)",,,,,Maru-Shin,MJ-8435,,
+Hand,J3,1,FH-1x4SG/RH,PinSocket_2x04_P2.54mm_Vertical,"Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Chang Enn,FH-1x4SG/RH x2,,https://akizukidenshi.com/catalog/g/g110099/
+Hand,J4,1,FH-2x10SG,PinSocket_2x10_P2.54mm_Vertical,"Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Chang Enn,FH-2x10SG,,
+Hand,"J5, J7",2,NMJ6HCD3,Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal,"6.35mm (1/4in) stereo jack, switched, with chrome ferrule and offset PCB pins",,,,,Neutrik,NMJ6HCD3,,https://www.neutrik.com/en/product/nmj6hcd3
+Hand,J6,1,A1001WR-S-04P,JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,"Generic connectable mounting pin connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,Herwell,A1001WR-S-04P,,https://akizukidenshi.com/catalog/g/g116800/
+Hand,J8,1,B6B-PH-K-S,JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical,"Generic connector, single row, 01x06, script generated",,,,,JST,B6B-PH-K-S(LF)(SN),,https://akizukidenshi.com/catalog/g/g112806/
+Hand,"Q1, Q3",2,SSM3J334R,SOT-23,"P-MOSFET transistor, drain/source/gate",,,,,Toshiba,SSM3J334R,C396017,https://toshiba.semicon-storage.com/info/SSM3J334R_datasheet_ja_20181004.pdf?did=5578&prodName=SSM3J334R
+Hand,"Q12, Q13",2,2SC945-K,TO-92_Inline_Wide,"0.15A Ic, 50V Vce, Low Noise Audio NPN Transistor, TO-92",,,,,UTC,2SC945-K,,https://akizukidenshi.com/goodsaffix/2SC945_nec.pdf
+Hand,RV1,1,10kC,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CenterAnker_GND,Potentiometer with a mounting pin,,,,,Alpha,RD901F-40-15R1-C10K,,
+Hand,"RV2, RV3",2,20kB,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CenterAnker_GND,Potentiometer with a mounting pin,,,,,Alpha,RD901F-40-15R1-B20K,,
+Hand,RV4,1,50kA,Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CenterAnker_GND,Potentiometer with a mounting pin,,,,,Alpha,RD901F-40-15R1-A50K,,
+Hand,"SW1, SW2, SW3",3,2MS3-T1-B4-M2-Q-E,Toggle_SW_mini_2MS1-T1-B4-M2-Q-E,"Switch, single pole double throw, center OFF position",,,,,Cosland,2MS3-T1-B4-M2-Q-E,,https://akizukidenshi.com/catalog/g/g102400/
+Hand,U2,1,TLP2361,SO-5-6_4.55x3.7mm_P1.27mm,"5-Mbps low-power non inverting photocouple, 3.75 kVrms, 2.7 - 5.5 Vdd, push-pull output",,,,,Toshiba,TLP2361,C107626,https://akizukidenshi.com/catalog/g/g111004/
+Hand,U4,1,TLV9362IDR,SOIC-8_3.9x4.9mm_P1.27mm,"40-V, 1-MHz, RRO Operational Amplifiers for Cost-Sensitive Systems, SOIC-8",,,,,TI,TLV9362IDR,C4367884,https://www.ti.com/lit/ds/symlink/tlv9302.pdf
+DNP,"D1, D2",2,MMSZ5245B,D_SOD-123,"Zener diode, small symbol",,,,,R+O,MMSZ5245B,C19077428,
