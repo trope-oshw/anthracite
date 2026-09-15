@@ -31,9 +31,14 @@ First public release.
 ### Hardware
 - Anthracite v1.0. Analogue signal path throughout, switched by analogue
   switches rather than mechanical contacts, with a buffered bypass.
-- Three boards: top (analogue), bottom (control), and the front panel.
+- Three circuit boards: top (analogue), bottom (control) and footswitch, plus
+  the front-panel artwork.
 - Four potentiometers (Volume, Fuzz, Bass, Treble) and three-position toggles
   for Bias, Response and Input.
+- The published top and bottom boards carry `V1.0`, CERN-OHL-S-2.0 and
+  `github.com/trope-oshw/anthracite` on the silkscreen in place of the product
+  name. Boards from the first production run carry `Anthracite V1.0` instead
+  and are otherwise identical.
 
 ### Firmware
 - 1.0.0. MIDI CC control of the toggles, MIDI-Learn, MIDI Thru, and Active
