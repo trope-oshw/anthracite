@@ -25,6 +25,11 @@ parties and remain under their own licences (STMicroelectronics HAL:
 BSD-3-Clause; ARM CMSIS: Apache-2.0). Those files carry their own SPDX
 headers, which take precedence over the directory-level declaration above.
 
+Some footprints and the symbol libraries in hardware/*/libs/ are derived
+from the KiCad standard libraries (KiCad Libraries Team) and remain under
+CC-BY-SA-4.0 with the KiCad libraries exception
+(CC-BY-SA-4.0 WITH KiCad-libraries-exception). REUSE.toml lists those files.
+
 
 -------------------------------------------------------------------------
 HARDWARE — CERN-OHL-S v2 NOTICE

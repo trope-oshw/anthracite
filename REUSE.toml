@@ -12,6 +12,10 @@ version = 1
 # a file always wins over these directory-level declarations. That is what
 # keeps third-party firmware sources (ST HAL: BSD-3-Clause, ARM CMSIS:
 # Apache-2.0) correctly attributed without listing them individually.
+#
+# When several tables match the same file, the last one applies. The
+# KiCad-library tables at the end therefore override hardware/** for the
+# files they list.
 
 [[annotations]]
 path = "hardware/**"
@@ -32,3 +36,51 @@ SPDX-License-Identifier = "GPL-3.0-or-later"
 path = ["docs/**", "README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# ------------------------------------------------ Derived from KiCad libraries
+#
+# These footprints are modified copies of footprints from the KiCad standard
+# library (https://gitlab.com/kicad/libraries/kicad-footprints), which is
+# licensed CC-BY-SA-4.0 with the KiCad libraries exception. Redistributing
+# library parts as a library is not covered by the exception, so these files
+# stay under CC-BY-SA-4.0; the exception still lets anyone use them in their
+# own designs without licensing those designs under CC-BY-SA-4.0.
+#
+#   D_0603_1608Metric_Name                <- Diode_SMD:D_0603_1608Metric
+#   R_0402_1005Metric_MiniFont            <- Resistor_SMD:R_0402_1005Metric
+#   STDC14_2x07_P1.27mm_Vertical_ST-LINKV3
+#                                         <- Connector_PinHeader_1.27mm:
+#                                            PinHeader_2x07_P1.27mm_Vertical
+#   TestPoint_Pad_1.5x1.5mm_Label         <- TestPoint:TestPoint_Pad_1.5x1.5mm
+#   Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal
+#                                         <- Connector_Audio:
+#                                            Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal
+#   Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CenterAnker_GND
+#                                         <- Potentiometer_THT:
+#                                            Potentiometer_Alpha_RD901F-40-00D_Single_Vertical
+#
+# The other footprints in libs/anthracite.pretty/ were drawn for this project
+# and fall under hardware/** above.
+
+[[annotations]]
+path = [
+    "hardware/*/libs/anthracite.pretty/D_0603_1608Metric_Name.kicad_mod",
+    "hardware/*/libs/anthracite.pretty/R_0402_1005Metric_MiniFont.kicad_mod",
+    "hardware/*/libs/anthracite.pretty/STDC14_2x07_P1.27mm_Vertical_ST-LINKV3.kicad_mod",
+    "hardware/*/libs/anthracite.pretty/TestPoint_Pad_1.5x1.5mm_Label.kicad_mod",
+    "hardware/*/libs/anthracite.pretty/Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal.kicad_mod",
+    "hardware/*/libs/anthracite.pretty/Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CenterAnker_GND.kicad_mod",
+]
+SPDX-FileCopyrightText = ["KiCad Libraries Team", "2026 Hayata Yamamoto (山本回路設計)"]
+SPDX-License-Identifier = "CC-BY-SA-4.0 WITH KiCad-libraries-exception"
+
+# The symbol libraries are built on symbols from the KiCad standard library
+# (https://gitlab.com/kicad/libraries/kicad-symbols): the resistors on
+# Device:R, and most other symbols on Device, Analog_Switch,
+# Regulator_SwitchedCapacitor and Simulation_SPICE symbols. They are declared
+# the same way as the footprints above.
+
+[[annotations]]
+path = "hardware/*/libs/anthracite.kicad_sym"
+SPDX-FileCopyrightText = ["KiCad Libraries Team", "2026 Hayata Yamamoto (山本回路設計)"]
+SPDX-License-Identifier = "CC-BY-SA-4.0 WITH KiCad-libraries-exception"
