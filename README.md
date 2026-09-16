@@ -9,8 +9,10 @@ microcontroller only moves those switches and never touches the audio.
 
 Designed and built by [Trope](https://docs.trope-oshw.org) (山本回路設計).
 
-<!-- TODO(publish): add hero photo, purchase link, and the OSHWA UID badge once
-     certification is granted. -->
+<img src="docs/images/anthracite-v1.0.jpg" alt="Anthracite v1.0, seen from above at an angle: four aluminium knobs, three toggle switches and a footswitch on a matte black enclosure" width="480">
+
+<!-- TODO(publish): replace the photo above with the final product shot, and add
+     the purchase link and the OSHWA UID badge once certification is granted. -->
 
 ## Specifications
 

@@ -41,6 +41,13 @@ path = "docs/**"
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CERN-OHL-S-2.0"
 
+# Photographs of the finished product are not design data.
+
+[[annotations]]
+path = "docs/images/**"
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
 [[annotations]]
 path = ["README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"

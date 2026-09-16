@@ -17,6 +17,7 @@ which are licensed separately:
   docs/         CERN-OHL-S-2.0      Generated design documents: schematic
                                     PDFs and PNGs, bills of materials, board
                                     STEP files
+  docs/images/  CC-BY-SA-4.0        Photographs of the finished product
   README and
   other text    CC-BY-SA-4.0        README, CHANGELOG, ERRATA, CONTRIBUTING
 
