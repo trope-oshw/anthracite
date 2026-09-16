@@ -14,7 +14,11 @@ which are licensed separately:
   hardware/     CERN-OHL-S-2.0      Circuit boards, schematics, libraries
   enclosure/    CERN-OHL-S-2.0      Mechanical design, panel, drawings
   firmware/     GPL-3.0-or-later    Firmware source written for this product
-  docs/         CC-BY-SA-4.0        Documentation, images, README
+  docs/         CERN-OHL-S-2.0      Generated design documents: schematic
+                                    PDFs and PNGs, bills of materials, board
+                                    STEP files
+  README and
+  other text    CC-BY-SA-4.0        README, CHANGELOG, ERRATA, CONTRIBUTING
 
 The full text of each licence is in the LICENSES/ directory. Per-file
 licensing is declared in REUSE.toml, following the REUSE Specification

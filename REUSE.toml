@@ -32,8 +32,17 @@ path = "firmware/**"
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "GPL-3.0-or-later"
 
+# docs/ holds generated design documents (schematic PDFs and PNGs, bills of
+# materials, board STEP files), so they carry the hardware licence rather than
+# the documentation one.
+
 [[annotations]]
-path = ["docs/**", "README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
+path = "docs/**"
+SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
+SPDX-License-Identifier = "CERN-OHL-S-2.0"
+
+[[annotations]]
+path = ["README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
@@ -74,13 +83,13 @@ path = [
 SPDX-FileCopyrightText = ["KiCad Libraries Team", "2026 Hayata Yamamoto (山本回路設計)"]
 SPDX-License-Identifier = "CC-BY-SA-4.0 WITH KiCad-libraries-exception"
 
-# The symbol libraries are built on symbols from the KiCad standard library
-# (https://gitlab.com/kicad/libraries/kicad-symbols): the resistors on
-# Device:R, and most other symbols on Device, Analog_Switch,
-# Regulator_SwitchedCapacitor and Simulation_SPICE symbols. They are declared
-# the same way as the footprints above.
+# The symbol libraries are a mix. Some symbols are built on symbols from the
+# KiCad standard library (https://gitlab.com/kicad/libraries/kicad-symbols) -
+# the resistors on Device:R, others on Device, Analog_Switch,
+# Regulator_SwitchedCapacitor and Simulation_SPICE symbols - and the rest were
+# drawn for this project. Both licences therefore apply to the file as a whole.
 
 [[annotations]]
 path = "hardware/*/libs/anthracite.kicad_sym"
 SPDX-FileCopyrightText = ["KiCad Libraries Team", "2026 Hayata Yamamoto (山本回路設計)"]
-SPDX-License-Identifier = "CC-BY-SA-4.0 WITH KiCad-libraries-exception"
+SPDX-License-Identifier = "CERN-OHL-S-2.0 AND CC-BY-SA-4.0 WITH KiCad-libraries-exception"
