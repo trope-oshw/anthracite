@@ -1,18 +1,18 @@
 # Anthracite
 
-<!-- TODO(pitch): 3–4 sentences, in your own voice. What it is, who it is for,
-     and what makes it different. This is the one part I should not write for you. -->
+A MIDI-controllable analogue fuzz pedal.
 
-A MIDI-controllable analogue fuzz pedal. The entire signal path is analogue and
-switched by analogue switches rather than mechanical contacts; the
-microcontroller only moves those switches and never touches the audio.
+Fuzz pedals are awkward to live with: the sound changes when you swap guitars, a
+wah in front of one loses its range, and few switchers can drive one. Most of
+that traces back to a single cause — the input impedance of a fuzz is low, and
+it is fixed. Anthracite lets you choose the load your pickup sees, and keeps the
+whole signal path analogue: it is switched by analogue switches rather than
+mechanical contacts, and the microcontroller only moves those switches and never
+touches the audio.
 
-Designed and built by [Trope](https://docs.trope-oshw.org) (山本回路設計).
+Designed and built by [Trope](https://trope-oshw.org) (山本回路設計).
 
 <img src="docs/images/anthracite-v1.0.jpg" alt="Anthracite v1.0, seen from above at an angle: four aluminium knobs, three toggle switches and a footswitch on a matte black enclosure" width="480">
-
-<!-- TODO(publish): replace the photo above with the final product shot, and add
-     the purchase link and the OSHWA UID badge once certification is granted. -->
 
 ## Specifications
 
@@ -100,9 +100,6 @@ messages are passed through to MIDI OUT unmodified, both only in MIDI mode
 external footswitch input.
 
 ## What is in this repository
-
-<!-- TODO(publish): verify this list against the actual tree before going public.
-     Listing something that is not there is the most common way these READMEs rot. -->
 
 ```
 hardware/     KiCad projects for the three circuit boards (top, bottom and
@@ -207,11 +204,13 @@ errata first.**
 
 ## Buying one
 
-<!-- TODO(publish): purchase link and price, once decided. Cost breakdown and
-     the pricing formula will be published at docs.trope-oshw.org. -->
+Units are built and tested by Trope, and every one ships with its own test
+report. Price and availability are not settled yet; when they are, they will be
+announced at **https://trope-oshw.org/anthracite/#buy**, together with the cost
+breakdown and the formula the price is derived from. Until then, ask at
+trope.oshw@gmail.com.
 
-Units built and tested by Trope are sold at [link to come]. Buying one is what
-pays for the next design being opened.
+Buying one is what pays for the next design being opened.
 
 ## Contributing
 
