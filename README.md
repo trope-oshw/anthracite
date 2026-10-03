@@ -12,7 +12,20 @@ touches the audio.
 
 Designed and built by [Trope](https://trope-oshw.org) (山本回路設計).
 
-<img src="docs/images/anthracite-v1.0.jpg" alt="Anthracite v1.0, seen from above at an angle: four aluminium knobs, three toggle switches and a footswitch on a matte black enclosure" width="480">
+<img src="docs/images/anthracite-top.jpg" alt="Anthracite v1.0 seen from directly above: four aluminium knobs, three toggle switches and a footswitch on a matte black enclosure, with every control label legible" width="480">
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/images/anthracite-ne.jpg" alt="Anthracite v1.0 seen from above at an angle, with the LED lit red and a cable plugged into the top edge" width="260"></td>
+    <td align="center"><img src="docs/images/anthracite-s.jpg" alt="The top edge of Anthracite v1.0: two 3.5 mm TRS MIDI jacks on the left and the 9 V DC barrel jack on the right" width="260"></td>
+    <td align="center"><img src="docs/images/anthracite-w.jpg" alt="One side of Anthracite v1.0, with a single 1/4 inch jack" width="260"></td>
+  </tr>
+  <tr>
+    <td align="center">Angled view, LED lit</td>
+    <td align="center">Top edge: MIDI IN / OUT (3.5 mm TRS) and 9 V DC</td>
+    <td align="center">Side: 1/4" jack</td>
+  </tr>
+</table>
 
 ## Specifications
 

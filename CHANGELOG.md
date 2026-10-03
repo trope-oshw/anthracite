@@ -22,7 +22,8 @@ two are listed together for each release.
 - See [ERRATA.md](ERRATA.md)
 
 ### Documentation
-- (nothing yet)
+- Replaced the README product photo with a top view of the finished pedal,
+  and added three more views: angled, top edge and side.
 
 ## [1.0.0] - 2026-XX-XX
 
