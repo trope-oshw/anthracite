@@ -18,12 +18,12 @@ Designed and built by [Trope](https://trope-oshw.org) (山本回路設計).
   <tr>
     <td align="center"><img src="docs/images/anthracite-ne.jpg" alt="Anthracite v1.0 seen from above at an angle, with the LED lit red and a cable plugged into the top edge" width="260"></td>
     <td align="center"><img src="docs/images/anthracite-s.jpg" alt="The top edge of Anthracite v1.0: two 3.5 mm TRS MIDI jacks on the left and the 9 V DC barrel jack on the right" width="260"></td>
-    <td align="center"><img src="docs/images/anthracite-w.jpg" alt="One side of Anthracite v1.0, with a single 1/4 inch jack" width="260"></td>
+    <td align="center"><img src="docs/images/anthracite-w.jpg" alt="The input side of Anthracite v1.0, with the 1/4 inch input jack" width="260"></td>
   </tr>
   <tr>
     <td align="center">Angled view, LED lit</td>
     <td align="center">Top edge: MIDI IN / OUT (3.5 mm TRS) and 9 V DC</td>
-    <td align="center">Side: 1/4" jack</td>
+    <td align="center">Input side: 1/4" jack</td>
   </tr>
 </table>
 
