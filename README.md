@@ -59,8 +59,8 @@ pickup's resonant peak lower, and the Input switch selects between three loads.
 
 | Board | Size | Layers | Copper |
 |---|---|---|---|
-| Top (analogue) | 60 × 102 mm | 4 | 35 µm (1 oz) |
-| Bottom (control) | 60 × 73.5 mm | 4 | 35 µm (1 oz) |
+| Top (analogue) | 60 × 102 mm | 4 | 35 µm (1 oz) outer, 17.5 µm (0.5 oz) inner |
+| Bottom (control) | 60 × 73.5 mm | 4 | 35 µm (1 oz) outer, 17.5 µm (0.5 oz) inner |
 | Footswitch | 14 × 16.15 mm | 2 | — |
 
 All boards are 1.6 mm FR-4.
@@ -127,10 +127,9 @@ docs/         Schematics (PDF, plus a PNG of each sheet), bills of materials
               (CSV), 3D models of the assembled boards (STEP)
 ```
 
-Manufacturing data (Gerbers, pick-and-place, JLCPCB-format BOM) will be attached
+Manufacturing data (Gerbers, pick-and-place, JLCPCB-format BOM) is attached
 to each [release](https://github.com/trope-oshw/anthracite/releases) rather than
 kept in the tree, so that what you download always matches a specific version.
-No release has been published yet.
 
 The user manual, measured data, and circuit explanations live at
 **https://docs.trope-oshw.org** — they are not duplicated here.
@@ -141,7 +140,7 @@ The KiCad projects are self-contained: every custom symbol and footprint is in
 the project's own `libs/` directory, so you can clone this repository and open
 them without installing anything else.
 
-Ordering parameters used for the production run will be recorded in
+Ordering parameters used for the production run are recorded in
 `ordering-notes.md` attached to each release. They matter — a board made to
 different stackup or copper weight is not the same board.
 

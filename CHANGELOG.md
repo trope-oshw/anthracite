@@ -25,7 +25,7 @@ two are listed together for each release.
 - Replaced the README product photo with a top view of the finished pedal,
   and added three more views: angled, top edge and side.
 
-## [1.0.0] - 2026-XX-XX
+## [1.0.0] - 2026-10-07
 
 First public release.
 
