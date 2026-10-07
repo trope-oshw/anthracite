@@ -22,8 +22,7 @@ two are listed together for each release.
 - See [ERRATA.md](ERRATA.md)
 
 ### Documentation
-- Replaced the README product photo with a top view of the finished pedal,
-  and added three more views: angled, top edge and side.
+- (nothing yet)
 
 ## [1.0.0] - 2026-10-07
 
@@ -50,6 +49,8 @@ First public release.
 
 ### Documentation
 - User manual published at https://docs.trope-oshw.org
+- README product photo: a top view of the finished pedal, plus angled, top
+  edge and side views.
 
 [Unreleased]: https://github.com/trope-oshw/anthracite/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/trope-oshw/anthracite/releases/tag/v1.0.0
