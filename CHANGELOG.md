@@ -39,16 +39,23 @@ First public release.
   `github.com/trope-oshw/anthracite` on the silkscreen in place of the product
   name. Boards from the first production run carry `Anthracite V1.0` instead
   and are otherwise identical.
+- The NMJ6HCD3 symbol stored in the top schematic now names the same footprint
+  as J5, J7 and the board. Only that symbol metadata changed; the board, the
+  Gerbers and the BOM match the shipped boards.
 
 ### Firmware
 - 1.0.0. MIDI CC control of the toggles, MIDI-Learn, MIDI Thru, and Active
   Sensing output.
+- Source in `firmware/`: the STM32CubeMX project, the CMake build, and the ST
+  HAL and CMSIS. The `Debug` preset reproduces the shipped flash image; see
+  [firmware/README.md](firmware/README.md) for the toolchain and the SHA-256.
 
 ### Errata
 - None known at release.
 
 ### Documentation
 - User manual published at https://docs.trope-oshw.org
+- Parts list in [hardware/parts.md](hardware/parts.md).
 - README product photo: a top view of the finished pedal, plus angled, top
   edge and side views.
 

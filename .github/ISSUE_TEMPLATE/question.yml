@@ -1,6 +1,6 @@
 name: Question about the circuit or the design
 description: Ask why something is the way it is
-labels: []
+labels: [question]
 body:
   - type: markdown
     attributes:

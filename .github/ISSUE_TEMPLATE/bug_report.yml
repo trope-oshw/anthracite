@@ -1,19 +1,19 @@
 name: Something does not work
 description: The pedal, the firmware, or the design files behave differently from the documentation
-labels: []
+labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time. The two fields below save the most
-        back-and-forth, so please fill them in even if they seem irrelevant —
+        back-and-forth, so please fill them in even if they seem irrelevant:
         a lot of behaviour depends on which board and firmware you have.
 
   - type: input
     id: board
     attributes:
       label: Board version
-      description: Silkscreened on the PCB, e.g. `ANTHRACITE V1.0`. If you built it yourself from these files, say which release you used.
+      description: Silkscreened on the PCB, e.g. `Anthracite V1.0` (Trope's first production run) or `V1.0` (boards made from these files). If you built it yourself, say which release you used.
       placeholder: V1.0
     validations:
       required: true
@@ -22,7 +22,7 @@ body:
     id: firmware
     attributes:
       label: Firmware version
-      description: If you are not sure, say so — that is a useful answer too.
+      description: If you are not sure, say so; that is a useful answer too.
       placeholder: 1.0.0
     validations:
       required: true
