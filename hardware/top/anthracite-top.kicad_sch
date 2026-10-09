@@ -1634,7 +1634,7 @@
 					)
 				)
 			)
-			(property "Footprint" "anthracite:Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal_PCB"
+			(property "Footprint" "anthracite:Jack_6.35mm_Neutrik_NMJ6HCD3_Horizontal"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
