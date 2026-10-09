@@ -34,6 +34,7 @@ cmake-build-*/
 *.cyclo
 *.map
 *.list
+firmware/*.bin
 
 # STM32CubeIDE / Eclipse
 .settings/
