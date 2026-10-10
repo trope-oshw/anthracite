@@ -26,9 +26,10 @@ build it yourself and tell me how it went. I will credit you either way.
 
 Typo fixes, clarifications, and translations especially.
 
-For firmware changes, note that the released binary is frozen per hardware
-revision: a change that alters the flash image cannot go into a version that
-has already shipped. It will be queued for the next revision instead.
+For firmware changes, note that Trope keeps the flash image of firmware 1.0.0,
+the version on shipped units, as it is. A change that alters the flash image
+goes into the next firmware version, which carries its own semantic version
+number.
 
 ## What this project is
 

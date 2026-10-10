@@ -80,7 +80,7 @@ Toggle positions are listed from top to bottom.
 
 | Toggle | Positions | What it changes |
 |---|---|---|
-| **Bias** | Skew / Offset / Center | Operating point of the output-side fuzz transistor (3:1, 2:1, 1:1). More asymmetry means more even-order harmonics and less gain. Second harmonic moves from −16.7 dBc (Center) to −9.5 dBc (Skew) at 400 Hz / 0.1 Vpp, Fuzz 50 %. With DIP-SW2 on, the toggle selects Offset / Skew / X-Skew (4:1) instead |
+| **Bias** | Skew / Offset / Center | Operating point of the output-side fuzz transistor (3:1, 2:1, 1:1). More asymmetry means more even-order harmonics and less gain. Second harmonic moves from −16.7 dBc (Center) to −9.5 dBc (Skew) at 400 Hz / 0.1 Vpp, Fuzz 50 %. With DIP-SW2 on, the toggle selects X-Skew (4:1) / Skew / Offset instead |
 | **Response** | Gradual / Medium / Steep | Series resistance at the fuzz input, which sets how abruptly the pedal cleans up as you roll back the guitar volume. THD at 400 Hz / 1 Vpp, Fuzz 50 %: 65.6 % / 59.7 % / 49.3 % |
 | **Input** | Wah / Hum / Single | Input filter, which sets the loading your pickup sees (see the impedance figures above) |
 
@@ -227,11 +227,11 @@ errata first.**
 
 ## Buying one
 
-Units are built and tested by Trope, and every one ships with its own test
-report. Price and availability are not settled yet; when they are, they will be
-announced at **https://trope-oshw.org/anthracite/#buy**, together with the cost
-breakdown and the formula the price is derived from. Until then, ask at
-trope.oshw@gmail.com.
+Anthracite is on sale. Trope builds and tests each unit and ships it with its
+own test report. The product page at **https://trope-oshw.org/anthracite/**
+shows the current price and takes orders. Trope plans to publish the cost
+breakdown and the formula behind the price at **https://docs.trope-oshw.org**.
+Questions go to trope.oshw@gmail.com.
 
 Buying one is what pays for the next design being opened.
 

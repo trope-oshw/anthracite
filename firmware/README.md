@@ -10,8 +10,8 @@ This tree is firmware 1.0.0, the version on shipped v1.0 units.
 
 This firmware is licensed under **GPL-3.0-or-later**. That licence asks that if
 you receive a device with GPL software on it, you are able to replace that
-software with your own modified version. So the procedure is documented here,
-and the SWD header is left accessible and unlocked on shipped units.
+software with your own modified version. Trope documents the procedure here
+and leaves the SWD header on shipped units accessible and unlocked.
 
 You do not need any of this to use the pedal.
 

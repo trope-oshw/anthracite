@@ -39,7 +39,7 @@ First public release.
   `github.com/trope-oshw/anthracite` on the silkscreen in place of the product
   name. Boards from the first production run carry `Anthracite V1.0` instead
   and are otherwise identical.
-- The NMJ6HCD3 symbol stored in the top schematic now names the same footprint
+- The NMJ6HCD3 symbol stored in the top schematic names the same footprint
   as J5, J7 and the board. Only that symbol metadata changed; the board, the
   Gerbers and the BOM match the shipped boards.
 

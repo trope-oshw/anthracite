@@ -31,10 +31,14 @@ STM32CubeMX under BSD-3-Clause, the CMSIS headers and ST's CMSIS device
 files under Apache-2.0. Most of these files carry no SPDX header;
 REUSE.toml declares their licences.
 
-Some footprints and the symbol libraries in hardware/*/libs/ are derived
-from the KiCad standard libraries (KiCad Libraries Team) and remain under
-CC-BY-SA-4.0 with the KiCad libraries exception
-(CC-BY-SA-4.0 WITH KiCad-libraries-exception). REUSE.toml lists those files.
+Some footprints in hardware/*/libs/ are derived from the KiCad standard
+libraries (KiCad Libraries Team) and remain under CC-BY-SA-4.0 with the
+KiCad libraries exception (CC-BY-SA-4.0 WITH KiCad-libraries-exception).
+The symbol libraries (hardware/*/libs/anthracite.kicad_sym) mix symbols
+built on KiCad standard library symbols with symbols drawn for this
+project, so both licences apply to them:
+CERN-OHL-S-2.0 AND CC-BY-SA-4.0 WITH KiCad-libraries-exception.
+REUSE.toml lists those files.
 
 
 -------------------------------------------------------------------------
