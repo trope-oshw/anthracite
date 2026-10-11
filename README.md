@@ -132,8 +132,8 @@ enclosure.
 Gerbers and the ordering notes are attached to each
 [release](https://github.com/trope-oshw/anthracite/releases) rather than kept in
 the tree, so that what you download always matches a specific version. There is
-no assembler-specific BOM or pick-and-place file: build them from `docs/bom-*.csv`
-and the KiCad projects for whoever assembles your boards.
+no assembler-specific BOM or pick-and-place file: build them from
+`docs/bom/bom-*.csv` and the KiCad projects for whoever assembles your boards.
 
 The user manual, measured data, and circuit explanations live at
 **https://docs.trope-oshw.org** — they are not duplicated here.

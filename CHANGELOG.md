@@ -24,6 +24,7 @@ two are listed together for each release.
 ### Documentation
 - Schematic PDFs and PNGs moved into `docs/schematics/pdf/` and
   `docs/schematics/png/`.
+- Bills of materials moved into `docs/bom/`.
 
 ## [1.0.0] - 2026-10-07
 

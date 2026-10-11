@@ -1,10 +1,11 @@
 # Parts
 
 The parts chosen for Anthracite v1.0, collected from the bills of materials in
-`docs/`. Positions, quantities and the full field list for each board are in
-`docs/bom-top.csv`, `docs/bom-bottom.csv`, `docs/bom-footswitch.csv` and
-`docs/bom-mechanical.csv`. KiCad exports the board BOMs from the projects;
-Trope wrote this file by hand from them. If the two disagree, follow the BOM.
+`docs/bom/`. Positions, quantities and the full field list for each board are
+in `docs/bom/bom-top.csv`, `docs/bom/bom-bottom.csv`,
+`docs/bom/bom-footswitch.csv` and `docs/bom/bom-mechanical.csv`. KiCad exports
+the board BOMs from the projects; Trope wrote this file by hand from them. If
+the two disagree, follow the BOM.
 
 **Fit:** on the first production run the board house assembled the `SMT` parts
 (`PCBA` in the BOM) and Trope hand-soldered the `Hand` parts. `DNP` parts stay
@@ -132,7 +133,7 @@ in the BOMs by value, package, tolerance, voltage, dielectric and LCSC number:
 
 ## Mechanical parts
 
-From `docs/bom-mechanical.csv`, which also gives supplier part numbers and
+From `docs/bom/bom-mechanical.csv`, which also gives supplier part numbers and
 links.
 
 | Item | Qty | Part |
