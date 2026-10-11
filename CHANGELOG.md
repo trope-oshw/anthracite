@@ -22,7 +22,8 @@ two are listed together for each release.
 - See [ERRATA.md](ERRATA.md)
 
 ### Documentation
-- (nothing yet)
+- Schematic PDFs and PNGs moved into `docs/schematics/pdf/` and
+  `docs/schematics/png/`.
 
 ## [1.0.0] - 2026-10-07
 
