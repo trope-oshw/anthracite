@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "Anthracite PCB (Top)")
-		(date "2026-11-09")
+		(date "2026-11-11")
 		(rev "v1.1")
 		(company "Yamamoto Circuit Design")
 		(comment 1 "Copyright 2026 Hayata Yamamoto")
@@ -188,7 +188,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -201,7 +201,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4587,7 +4587,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25819"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5609,7 +5609,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22978"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7029,7 +7029,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7042,7 +7042,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8015,7 +8015,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7502719.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8028,7 +8028,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.25V@150mA 200mA 250mW 3ns 4A 5nA 85V Standalone SOD-323 Switching Diodes ROHS"
+		(property "Description" "85V 0.2A Switching Diode, SOD-323"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9048,7 +9048,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9061,7 +9061,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9953,7 +9953,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9966,7 +9966,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10922,7 +10922,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connectable mounting pin connector, double row, 02x01, this symbol is compatible with counter-clockwise, top-bottom and odd-even numbering schemes., script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic connectable mounting pin connector, single row, 01x02, script generated"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13306,7 +13306,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13319,7 +13319,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15675,7 +15675,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C13167"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16860,7 +16860,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C31850"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17256,7 +17256,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17269,7 +17269,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19378,7 +19378,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g112806/"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20431,7 +20431,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g111004/"
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=14229&prodName=TLP2361"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20442,7 +20442,7 @@
 				)
 			)
 		)
-		(property "Description" "5-Mbps low-power non inverting photocouple, 3.75 kVrms, 2.7 - 5.5 Vdd, push-pull output"
+		(property "Description" "15 MBd photocoupler, inverter logic, totem-pole output, 3.75 kVrms, 2.7 - 5.5 Vdd"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -21200,7 +21200,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/tl072.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22102,7 +22102,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C28323"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22524,7 +22524,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22537,7 +22537,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22885,7 +22885,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22898,7 +22898,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24319,7 +24319,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24332,7 +24332,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25079,7 +25079,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/goodsaffix/2SC945_nec.pdf"
+		(property "Datasheet" "https://www.unisonic.com.tw/datasheet/2SC945.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26702,7 +26702,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25819"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27127,7 +27127,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C23162"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28054,7 +28054,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28067,7 +28067,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28415,7 +28415,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28428,7 +28428,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28974,7 +28974,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22978"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30022,7 +30022,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C23212"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31404,7 +31404,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/goodsaffix/2SC945_nec.pdf"
+		(property "Datasheet" "https://www.unisonic.com.tw/datasheet/2SC945.pdf"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32724,7 +32724,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32737,7 +32737,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35458,7 +35458,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35471,7 +35471,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35819,7 +35819,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C7420333.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -36267,7 +36267,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C23151"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40365,7 +40365,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22843"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41556,7 +41556,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C26083"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42181,7 +42181,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C23151"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42407,7 +42407,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g110099/"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -43330,7 +43330,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43343,7 +43343,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43688,7 +43688,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22809"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -44308,7 +44308,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -44321,7 +44321,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46134,7 +46134,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C19077428.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46147,7 +46147,7 @@
 				)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "Zener diode, VZ = 15V"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48375,7 +48375,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C13167"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -49595,7 +49595,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22978"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -50418,7 +50418,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50431,7 +50431,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53434,7 +53434,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25804"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -53830,7 +53830,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C21190"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -54028,7 +54028,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2128.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -54041,7 +54041,7 @@
 				)
 			)
 		)
-		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+		(property "Description" "100V 0.15A Fast switching Diode, SOD-323"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58061,7 +58061,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g102400/"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58546,7 +58546,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g108411/"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -58906,7 +58906,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g102400/"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -63204,7 +63204,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g102400/"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)

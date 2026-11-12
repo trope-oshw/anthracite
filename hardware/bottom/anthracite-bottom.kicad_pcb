@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "Anthracite PCB (Bottom)")
-		(date "2026-11-09")
+		(date "2026-11-11")
 		(rev "v1.1")
 		(company "Yamamoto Circuit Design")
 		(comment 1 "Copyright 2026 Hayata Yamamoto")
@@ -449,7 +449,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1501,7 +1501,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2193,7 +2193,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2392,7 +2392,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2912,7 +2912,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5891,7 +5891,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6302,7 +6302,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8545,7 +8545,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22775"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10445,7 +10445,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10844,7 +10844,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13484,7 +13484,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15683,7 +15683,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17143,7 +17143,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g114159/"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eZH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18224,7 +18224,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18882,7 +18882,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19142,7 +19142,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20480,7 +20480,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22962"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -20879,7 +20879,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21920,7 +21920,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g108923/"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22281,7 +22281,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -24535,7 +24535,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29514,7 +29514,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30097,7 +30097,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30356,7 +30356,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30915,7 +30915,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -32067,7 +32067,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33172,7 +33172,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34852,7 +34852,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25117"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37837,7 +37837,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25079"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38109,7 +38109,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38567,7 +38567,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -39528,7 +39528,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -40359,7 +40359,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41640,7 +41640,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42922,7 +42922,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -43839,7 +43839,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -44358,7 +44358,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -50563,7 +50563,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.st.com/ja/memories/m24c64-r.html"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/m24c64-r.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -50574,7 +50574,7 @@
 				)
 			)
 		)
-		(property "Description" "64Kb serial FRAM nonvolatile Memory, SOIC-8"
+		(property "Description" "64Kbit serial I2C EEPROM, SOIC-8"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -51012,7 +51012,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -52031,7 +52031,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -52290,7 +52290,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -52792,7 +52792,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -53510,7 +53510,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -55096,7 +55096,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -55355,7 +55355,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -55814,7 +55814,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -56334,7 +56334,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://fscdn.rohm.com/jp/products/databook/datasheet/discrete/transistor/bipolar/umz1ntr-j.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C41375117.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -57329,7 +57329,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -59879,7 +59879,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g116793/"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)

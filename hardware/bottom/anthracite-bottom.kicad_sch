@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Anthracite Schematic (Bottom)")
-		(date "2026-11-09")
+		(date "2026-11-11")
 		(rev "v1.1")
 		(company "Yamamoto Circuit Design")
 		(comment 1 "Copyright 2026 Hayata Yamamoto")
@@ -5275,7 +5275,7 @@
 					)
 				)
 			)
-			(property "Description" "64Kb serial FRAM nonvolatile Memory, SOIC-8"
+			(property "Description" "64Kbit serial I2C EEPROM, SOIC-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5297,7 +5297,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "FRAM I2C Serial 5V FRAM NVRAM"
+			(property "ki_keywords" "EEPROM I2C Serial 5V EEPROM NVRAM"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6919,7 +6919,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7072,7 +7072,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7225,7 +7225,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25079"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7378,7 +7378,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7529,7 +7529,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7682,7 +7682,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7833,7 +7833,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7986,7 +7986,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8139,7 +8139,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8292,7 +8292,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C25117"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8445,7 +8445,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C22775"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8598,7 +8598,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://jlcpcb.com/partdetail/C22962"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -10588,7 +10588,7 @@
 		)
 		(uuid "3061168a-2181-42de-9aa4-ece849cbe805")
 	)
-	(text "Because the NJW4191's output contains significant switching noise (80mVpp 141kHz triangular ripple), \na ripple filter is required at its output."
+	(text "Because the NJW4191's output contains significant switching noise, \na ripple filter is required at its output."
 		(exclude_from_sim no)
 		(at 44.45 83.312 0)
 		(effects
@@ -10629,7 +10629,7 @@
 		)
 		(uuid "8e08159e-a2fa-41bd-a9db-67a89c511dc3")
 	)
-	(text "v1.1: Replaced the BJT open-collector circuit with two TTL-compatible inverters\nin series (U107A, U107B). This change reduced the TX-to-Tip delay (50 % level)\nfrom 2010 ns to 93 ns on rising edges and from 297 ns to 47 ns on falling edges.\nIn EXP-SW (latch) Mode, D118 is required to prevent U107B from sourcing current."
+	(text "v1.1: Replaced the BJT open-collector circuit with two TTL-compatible inverters\nin series (U107A, U107B).\nIn EXP-SW (latch) Mode, D118 is required to prevent U107B from sourcing current."
 		(exclude_from_sim no)
 		(at 181.61 277.368 0)
 		(effects
@@ -18335,7 +18335,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 287.02 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -18741,7 +18741,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 96.52 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -19100,7 +19100,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 181.61 264.16 0)
 			(hide yes)
 			(show_name no)
@@ -19656,7 +19656,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 280.67 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -20275,7 +20275,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g114159/"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eZH.pdf"
 			(at 172.72 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -20950,7 +20950,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25117"
+		(property "Datasheet" ""
 			(at 209.55 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -22554,7 +22554,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 264.16 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -23663,7 +23663,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 201.93 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -24358,7 +24358,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 209.55 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -24483,7 +24483,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 63.5 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -25370,7 +25370,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 185.42 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -25857,7 +25857,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 124.46 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -25982,7 +25982,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 119.38 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -26107,7 +26107,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 69.85 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -26233,7 +26233,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.st.com/ja/memories/m24c64-r.html"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/m24c64-r.pdf"
 			(at 33.02 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -26244,7 +26244,7 @@
 				)
 			)
 		)
-		(property "Description" "64Kb serial FRAM nonvolatile Memory, SOIC-8"
+		(property "Description" "64Kbit serial I2C EEPROM, SOIC-8"
 			(at 33.02 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -27263,7 +27263,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 54.61 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -28548,7 +28548,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 200.66 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -29023,7 +29023,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g108923/"
+		(property "Datasheet" ""
 			(at 341.63 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -31029,7 +31029,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 209.55 21.59 0)
 			(hide yes)
 			(show_name no)
@@ -31935,7 +31935,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 38.1 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -32273,7 +32273,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+		(property "Datasheet" ""
 			(at 180.34 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -32865,7 +32865,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 237.49 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -33146,7 +33146,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 240.03 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -33814,7 +33814,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g116793/"
+		(property "Datasheet" ""
 			(at 262.89 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -34465,7 +34465,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 127 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -34824,7 +34824,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 214.63 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -36258,7 +36258,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 78.74 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -36508,7 +36508,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 87.63 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -36633,7 +36633,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22775"
+		(property "Datasheet" ""
 			(at 238.76 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -36769,7 +36769,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 229.87 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -37247,7 +37247,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 105.41 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -37450,7 +37450,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 138.43 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -37873,7 +37873,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25890"
+		(property "Datasheet" ""
 			(at 60.96 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -38075,7 +38075,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 129.54 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -38953,7 +38953,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+		(property "Datasheet" ""
 			(at 293.37 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -39866,7 +39866,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
 			(at 398.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -40142,7 +40142,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25079"
+		(property "Datasheet" ""
 			(at 238.76 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -41817,7 +41817,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 270.51 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -42000,7 +42000,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74hct04.pdf"
 			(at 198.12 264.16 0)
 			(hide yes)
 			(show_name no)
@@ -42181,7 +42181,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C11702"
+		(property "Datasheet" ""
 			(at 222.25 238.76 0)
 			(hide yes)
 			(show_name no)
@@ -42939,7 +42939,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25105"
+		(property "Datasheet" ""
 			(at 170.18 254 0)
 			(hide yes)
 			(show_name no)
@@ -43221,7 +43221,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 186.69 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -43626,7 +43626,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C22962"
+		(property "Datasheet" ""
 			(at 209.55 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -43962,7 +43962,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 121.92 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -44399,7 +44399,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25867"
+		(property "Datasheet" ""
 			(at 101.6 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -45314,7 +45314,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/C25744"
+		(property "Datasheet" ""
 			(at 116.84 217.17 0)
 			(hide yes)
 			(show_name no)
