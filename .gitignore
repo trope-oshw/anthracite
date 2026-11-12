@@ -21,7 +21,7 @@ _autosave-*
 # Do NOT ignore these, despite what some upstream templates say:
 #   fp-lib-table, sym-lib-table  - needed to open the project elsewhere
 #   *.kicad_dru                  - design rules; KiCad docs say to commit it
-#   *.kicad_jobset               - the CI output configuration itself
+#   *.kicad_jobset               - KiCad output job settings, if one is added
 #   *.csv, *.xml, *.net          - BOM, pick-and-place, netlists
 #   *-cache*                     - needed to load legacy .sch files
 
@@ -54,6 +54,3 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# --------------------------------------------------------- CI artefacts
-/Generated/

@@ -17,9 +17,11 @@ which are licensed separately:
   docs/         CERN-OHL-S-2.0      Generated design documents: schematic
                                     PDFs and PNGs, bills of materials, board
                                     STEP files
-  docs/images/  CC-BY-SA-4.0        Photographs of the finished product
+  docs/images/  CC-BY-SA-4.0        Photographs of the finished product and
+                                    measured-data plots
   README and
-  other text    CC-BY-SA-4.0        README, CHANGELOG, ERRATA, CONTRIBUTING
+  other text    CC-BY-SA-4.0        README, CHANGELOG, ERRATA, CONTRIBUTING,
+                                    TRADEMARK, and their Japanese versions
 
 The full text of each licence is in the LICENSES/ directory. Per-file
 licensing is declared in REUSE.toml, following the REUSE Specification
@@ -42,7 +44,7 @@ REUSE.toml lists those files.
 
 
 -------------------------------------------------------------------------
-HARDWARE — CERN-OHL-S v2 NOTICE
+HARDWARE: CERN-OHL-S v2 NOTICE
 -------------------------------------------------------------------------
 
 This source describes Open Hardware and is licensed under the CERN-OHL-S v2.

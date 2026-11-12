@@ -80,11 +80,22 @@ path = [
     "firmware/cmake/**",
     "firmware/Inc/stm32f0xx_hal_conf.h",
     "firmware/Inc/stm32f0xx_it.h",
-    "firmware/Src/stm32f0xx_hal_msp.c",
     "firmware/Src/syscalls.c",
     "firmware/Src/sysmem.c",
 ]
 SPDX-FileCopyrightText = "STMicroelectronics"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+# STM32CubeMX generated stm32f0xx_hal_msp.c, and Trope added the PB6 pull-up
+# in a USER CODE block. The file keeps one licence: Trope's addition is under
+# BSD-3-Clause like the rest of it. The header carries ST's copyright line,
+# which REUSE detects, so "aggregate" is needed for this table's Trope entry
+# to apply as well.
+
+[[annotations]]
+path = "firmware/Src/stm32f0xx_hal_msp.c"
+precedence = "aggregate"
+SPDX-FileCopyrightText = ["2026 STMicroelectronics", "2026 Hayata Yamamoto (山本回路設計)"]
 SPDX-License-Identifier = "BSD-3-Clause"
 
 # The linker script states its notice in a form that REUSE does not detect.
@@ -114,7 +125,8 @@ path = "docs/**"
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CERN-OHL-S-2.0"
 
-# Photographs of the finished product are not design data.
+# Photographs of the finished product, and the measured-data plots used in the
+# README, are not design data.
 
 [[annotations]]
 path = "docs/images/**"
@@ -122,7 +134,7 @@ SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
 [[annotations]]
-path = ["README.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
+path = ["README.md", "README.ja.md", "CHANGELOG.md", "ERRATA.md", "CONTRIBUTING.md", "CONTRIBUTING.ja.md", "TRADEMARK.md", "TRADEMARK.ja.md", ".github/**", ".gitignore", ".gitattributes", "CHANGES.txt", "COPYRIGHT.txt"]
 SPDX-FileCopyrightText = "2026 Hayata Yamamoto (山本回路設計)"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
