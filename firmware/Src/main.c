@@ -49,6 +49,11 @@ typedef struct {
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+/* Firmware version. The boot banner prints it as "anthracite-<FW_VERSION>". Test tools read
+   the banner's second word as the firmware ID. The PING reply ("OK PONG v2") is the console protocol
+   version and stays independent of this. */
+#define FW_VERSION "1.1.0"
+
 /* PL9823-F5 (WS2812-compatible) bit-banged output on PA7.
    PA7 -> R114 -> 74HCT04 (two inverters = non-inverting 5V buffer) -> J105-8 -> top R18 -> D12 DIN */
 #define WS_PORT   GPIOA
@@ -58,6 +63,18 @@ typedef struct {
 #define NUM_LEDS  1
 
 #define FOOTSW_DEBOUNCE_MS  50
+/* Wait after update_mode_pb5() before reading the latch Tip. PB5 (through U107) closes U109 and
+   connects the Tip pull-up (+5V -> R127 3k3 -> U109 -> R144 470); the same PB5 also switches U110
+   (MIDI-mode Ring source) and D110. Tip must settle before PF0 is sampled. With the on-board C139
+   alone the RC is sub-microsecond; with an external cable's capacitance it stays within a few tens
+   of microseconds, so 2ms is ample. 2ms also covers a MIDI byte still shifting out of USART1
+   (<= 640us with one byte queued) when DIP-SW3 has just gone OFF. */
+#define LATCH_PULLUP_SETTLE_MS  2u
+/* Latch setting (DIP-SW4 OFF): Tip must hold a new level this long before the effect follows it.
+   Measured contact bounce of an external switch on Tip/Ring was about 0.4ms.
+   Timing uses the 1ms HAL tick and starts partway through a tick, so the hold actually required
+   is 4-5ms. */
+#define LATCH_DEBOUNCE_MS       5u
 #define IND_SOLID_MS        1000  /* Solid-on time at the start of an indication sequence */
 #define IND_BLINK_ON_MS     100
 #define IND_BLINK_OFF_MS    100
@@ -133,7 +150,7 @@ static volatile uint16_t effect_off_count    = 0;  /* Number of delayed OFFs exe
 
 static bool dip_sw1 = false; /* ON(Low)=power-on effect enabled */
 static bool dip_sw2 = false; /* ON(Low)=extended bias mode */
-static bool dip_sw3 = false; /* ON(Low)=MIDI mode / OFF(High)=latch mode */
+static volatile bool dip_sw3 = false; /* ON(Low)=MIDI mode / OFF(High)=latch mode. volatile: the USART1 ISR reads it to gate Thru */
 static bool dip_sw4 = false; /* latch mode (OFF) / momentary mode (ON) */
 
 /* Toggle switch inputs (all three have pole = GND and an external +3.3V pull-up).
@@ -141,6 +158,10 @@ static bool dip_sw4 = false; /* latch mode (OFF) / momentary mode (ON) */
    The schematic net names match the physical layout. */
 static GPIO_PinState prev_latch_tip  = GPIO_PIN_SET; /* PF0 */
 static GPIO_PinState prev_latch_ring = GPIO_PIN_SET; /* PF1 */
+/* Tip debounce for the latch setting: the level being timed and the HAL tick when it was first seen.
+   prev_latch_tip holds the accepted level; latch_tip_cand differs from it while a change is pending. */
+static GPIO_PinState latch_tip_cand    = GPIO_PIN_SET;
+static uint32_t      latch_tip_cand_ms = 0;
 static GPIO_PinState prev_bias_pos1  = GPIO_PIN_SET; /* PB2  */
 static GPIO_PinState prev_bias_pos3  = GPIO_PIN_SET; /* PB3  */
 static GPIO_PinState prev_resp_pos1  = GPIO_PIN_SET; /* PB0  */
@@ -250,8 +271,10 @@ static volatile uint32_t  midi_out_indicator_ms = 0; /* PB9 (MIDI-OUT TX) ON tim
 
 /* Periodic MIDI-OUT Active Sensing (0xFE) as a link keep-alive.
    Per the MIDI spec a receiver declares the link dead after 300ms of silence following a 0xFE,
-   so send every 250ms for margin. Sent only in MIDI mode (DIP-SW3 ON): in latch mode U108 pulls
-   the Q103 base to GND and disables the MIDI-OUT driver, so nothing would reach the wire anyway. */
+   so send every 250ms for margin. Sent only in MIDI mode (DIP-SW3 ON). MIDI-OUT and the latch input
+   share the J104 Tip (PB6 -> R123 -> U107 1->2->3->4 -> D118 -> R128 -> Tip), and no hardware gate
+   cuts the driver in latch mode, so any USART1 byte sent then would pull Tip Low and PF0 would read
+   it as a footswitch press. The firmware therefore keeps USART1 TX silent in latch mode. */
 #define MIDI_AS_INTERVAL_MS 250u
 static volatile uint32_t  midi_as_timer_ms = MIDI_AS_INTERVAL_MS;
 static volatile bool      midi_as_pending  = false;
@@ -328,7 +351,7 @@ static const dbg_pin_t dbg_pins[] = {
     { GPIOB, GPIO_PIN_13, "PB13", true  },  /* /F2 Filter Hum */
     { GPIOB, GPIO_PIN_14, "PB14", true  },  /* /F3 Filter Wah */
     { GPIOB, GPIO_PIN_15, "PB15", true  },  /* /R2 Response Gradual */
-    { GPIOB, GPIO_PIN_5,  "PB5",  true  },  /* MIDI-OUT / Latch mode select */
+    { GPIOB, GPIO_PIN_5,  "PB5",  true  },  /* Latch/MIDI mode: H = Tip pull-up (U109) + D110, L = Ring source (U110) */
     { GPIOB, GPIO_PIN_8,  "PB8",  true  },  /* MIDI-IN activity LED */
     { GPIOB, GPIO_PIN_9,  "PB9",  true  },  /* MIDI-OUT activity LED */
     { GPIOC, GPIO_PIN_13, "PC13", true  },  /* PowerGood status LED */
@@ -379,6 +402,7 @@ static void update_filter_output(void);
 static void update_led(void);
 static void poll_footswitch(void);
 static void poll_latch_input(void);
+static void latch_snapshot(void);
 static uint8_t get_bias_blink_count(GPIO_PinState pos1, GPIO_PinState pos3);
 static uint8_t get_response_blink_count(GPIO_PinState pos1, GPIO_PinState pos3);
 static uint8_t get_filter_blink_count(GPIO_PinState pos1, GPIO_PinState pos3);
@@ -505,8 +529,8 @@ static void update_filter_output(void)
 }
 
 /* Bias, 3 states: inputs PB2(Pos1)/PB3(Pos3) -> outputs PA10(BIAS15)/PA11(BIAS30)
-   Standard mode (DIP-SW2 OFF): up=3:1 (Skew) / center=1.5:1 (Offset) / down=1:1 (Center)
-   Extended mode (DIP-SW2 ON) : up=4:1        / center=3:1            / down=1.5:1
+   Standard mode (DIP-SW2 OFF): up=3:1 (Skew) / center=2:1 (Offset) / down=1:1 (Center)
+   Extended mode (DIP-SW2 ON) : up=4:1 (X-Skew) / center=3:1 (Skew) / down=2:1 (Offset)
    Both outputs Low is the default Center (1:1). This switches inside the fuzz circuit, so it stays
    driven even when bypassed, to avoid a switching transient at the moment the effect is engaged. */
 static void update_bias_output(void)
@@ -516,7 +540,8 @@ static void update_bias_output(void)
     if (bias_override != BIAS_OVR_NONE) {
         /* A MIDI override drives the output pins directly, ignoring DIP-SW2 extended mode.
            Center=00 / Offset=10 / Skew=01 / X-Skew=11 (PA10,PA11).
-           X-Skew (both High) is electrically the 4:1 of extended mode and is reachable only over MIDI. */
+           X-Skew (both High) is the 4:1 setting, the same state as extended mode (DIP-SW2 ON) with the
+           toggle up, so it is reachable both over MIDI and from the panel. */
         switch (bias_override) {
             case BIAS_OVR_CENTER: bias15 = GPIO_PIN_RESET; bias30 = GPIO_PIN_RESET; break;
             case BIAS_OVR_OFFSET: bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_RESET; break;
@@ -531,7 +556,7 @@ static void update_bias_output(void)
             if (pos1 == GPIO_PIN_RESET && pos3 == GPIO_PIN_SET) {
                 bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_SET;   /* up: 4:1 */
             } else if (pos1 == GPIO_PIN_SET && pos3 == GPIO_PIN_RESET) {
-                bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_RESET; /* down: 1.5:1 */
+                bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_RESET; /* down: 2:1 */
             } else {
                 bias15 = GPIO_PIN_RESET; bias30 = GPIO_PIN_SET;   /* center: 3:1 */
             }
@@ -541,7 +566,7 @@ static void update_bias_output(void)
             } else if (pos1 == GPIO_PIN_SET && pos3 == GPIO_PIN_RESET) {
                 bias15 = GPIO_PIN_RESET; bias30 = GPIO_PIN_RESET; /* down: 1:1 */
             } else {
-                bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_RESET; /* center: 1.5:1 */
+                bias15 = GPIO_PIN_SET;   bias30 = GPIO_PIN_RESET; /* center: 2:1 */
             }
         }
     }
@@ -676,7 +701,7 @@ static void update_led(void)
     } else if (led_override == LED_OVERRIDE_OFF) {
         /* forced off - c stays NULL */
     } else if (!power_good) {
-        /* Warn on the main LED too when PowerGood is out of range (supply outside 8.4-10V).
+        /* Warn on the main LED too when PowerGood is out of range (supply outside 8.0-12.0V).
            The blink phase is pgood_blink_phase, shared with PC13 (SysTick drives a 200ms half-period).
            Effect on: red(255,12,0) <-> blue(30,10,237) / effect off: dim red(2,0,0) <-> dark.
            Lower priority than the indication sequences and MIDI-Learn, higher than the steady colors (red/purple/pink/off). */
@@ -753,6 +778,16 @@ static void poll_footswitch(void)
     }
 }
 
+/* Re-read Tip/Ring as the accepted levels and restart the Tip debounce from them.
+   Used wherever the latch inputs are re-snapshotted: power-on, DIP-SW3/SW4 change and DBG OFF. */
+static void latch_snapshot(void)
+{
+    prev_latch_tip    = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_0);
+    prev_latch_ring   = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_1);
+    latch_tip_cand    = prev_latch_tip;
+    latch_tip_cand_ms = HAL_GetTick();
+}
+
 /* Latch inputs PF0(Tip)/PF1(Ring). Active only in latch mode (DIP-SW3 OFF).
    DIP-SW4 selects how they behave:
      SW4 ON(Low)  = momentary: Tip H->L turns on, Ring H->L turns off (L->H is ignored)
@@ -760,7 +795,10 @@ static void poll_footswitch(void)
    Note: Ring serves only as the off input in momentary operation, as the manual documents it.
      update_led() picks the LED color from the effect state and leaves prev_latch_ring unread.
    Note: prev_latch_* is re-snapshotted the moment DIP-SW4 changes, to avoid a false trigger, so
-     switching mode with Tip held closed does not take effect until Tip next moves. */
+     switching mode with Tip held closed does not take effect until Tip next moves.
+   Latch setting debounce: a new Tip level is accepted only after it has held for LATCH_DEBOUNCE_MS,
+     so contact bounce no longer toggles the signal path several times. Momentary operation keeps
+     its set/reset scheme (an H->L edge on Tip sets, on Ring resets), which bounce cannot upset. */
 static void poll_latch_input(void)
 {
     if (dip_sw3) return; /* MIDI mode: latch input disabled */
@@ -787,9 +825,16 @@ static void poll_latch_input(void)
             }
         }
     } else {
-        /* Latch: follows the Tip level; Ring is for LED color */
-        if (tip != prev_latch_tip) {
-            prev_latch_tip = tip;
+        /* Latch: follows the debounced Tip level. Ring switches nothing here: a Ring change only
+           sets led_update_needed below, and update_led() takes the color from the effect state
+           without reading Ring (see above), so the LED keeps its color. */
+        uint32_t now = HAL_GetTick();
+        if (tip != latch_tip_cand) {
+            latch_tip_cand    = tip;          /* level moved: restart the timer */
+            latch_tip_cand_ms = now;
+        } else if (tip != prev_latch_tip &&
+                   (uint32_t)(now - latch_tip_cand_ms) >= LATCH_DEBOUNCE_MS) {
+            prev_latch_tip = tip;             /* held long enough: accept it */
             effect_active = (tip == GPIO_PIN_RESET); /* L=on, H=bypass */
             update_signal_path();
             led_update_needed = 1;
@@ -801,16 +846,16 @@ static void poll_latch_input(void)
     }
 }
 
-/* The blink count matches the integer part of the bias ratio (1:1=1, 1.5:1=2, 3:1=3, 4:1=4) */
+/* The blink count equals the bias ratio (1:1=1, 2:1=2, 3:1=3, 4:1=4) */
 static uint8_t get_bias_blink_count(GPIO_PinState pos1, GPIO_PinState pos3)
 {
     if (dip_sw2) {
-        /* Extended: up=4:1, center=3:1, down=1.5:1 */
+        /* Extended: up=4:1, center=3:1, down=2:1 */
         if (pos1 == GPIO_PIN_RESET && pos3 == GPIO_PIN_SET) return 4;
         if (pos1 == GPIO_PIN_SET && pos3 == GPIO_PIN_RESET) return 2;
         return 3;
     } else {
-        /* Standard: up=3:1, center=1.5:1, down=1:1 */
+        /* Standard: up=3:1, center=2:1, down=1:1 */
         if (pos1 == GPIO_PIN_RESET && pos3 == GPIO_PIN_SET) return 3;
         if (pos1 == GPIO_PIN_SET && pos3 == GPIO_PIN_RESET) return 1;
         return 2;
@@ -934,7 +979,13 @@ static void poll_filter_switch(void)
     }
 }
 
-/* PB5 selects MIDI-OUT vs Latch: H = latch mode, L = MIDI mode */
+/* PB5 selects the J104 role through U107:
+     H (latch mode): U109 closes and connects the Tip pull-up (+5V -> R127 3k3 -> U109 -> R144 470),
+                     U110 opens, D110 lights.
+     L (MIDI mode) : U109 opens, U110 closes and connects the Ring current source (+5V -> R131 -> U110
+                     -> R132 -> Ring), D110 goes dark.
+   PB5 no longer gates the MIDI-OUT driver (U108 is gone), so the firmware itself keeps USART1 TX
+   silent in latch mode. */
 static void update_mode_pb5(void)
 {
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5,
@@ -1139,7 +1190,8 @@ static void midi_process_event(uint8_t ch, uint8_t cc, uint8_t val)
 
 /* Called from the main loop: service the EEPROM write request and drain the received-CC queue.
    MIDI control always applies, whatever the DIP switches say (MIDI-IN is always live on its own jack).
-   Thru and Active Sensing stay MIDI-mode only, because the MIDI-OUT driver is disabled in hardware in latch mode. */
+   Thru and Active Sensing stay MIDI-mode only: MIDI-OUT drives the same J104 Tip that the latch input
+   reads, and nothing in hardware disables the driver in latch mode. */
 static void poll_midi(void)
 {
     if (learn_save_request) {
@@ -1176,7 +1228,7 @@ static void poll_midi(void)
    otherwise the ISR could send a Thru byte in the gap and we would interrupt a message after all. */
 static void poll_midi_out_sensing(void)
 {
-    if (!dip_sw3) {           /* latch mode: the MIDI-OUT driver is disabled */
+    if (!dip_sw3) {           /* latch mode: Tip is the latch input, keep USART1 TX silent */
         midi_as_pending = false;
         return;
     }
@@ -1220,9 +1272,12 @@ static void poll_midi_learn(void)
     }
 }
 
-/* Send one byte to MIDI-OUT (PB6/USART1_TX) and light PB9 */
+/* Send one byte to MIDI-OUT (PB6/USART1_TX) and light PB9.
+   Sends nothing in latch mode (DIP-SW3 OFF), whatever the caller checked: MIDI-OUT shares the
+   J104 Tip with the latch input on v1.1. */
 static void thru_send_byte(uint8_t b)
 {
+    if (!dip_sw3) return;
     while (!(USART1->ISR & USART_ISR_TXE)) { }
     USART1->TDR = b;
     thru_idle_ms = THRU_IDLE_GUARD_MS;   /* keep our Active Sensing out of this message */
@@ -1434,9 +1489,12 @@ static void midi_mon_push(uint16_t dir_flag, uint8_t b)
 /* MSEND: send an arbitrary byte to MIDI-OUT (USART1) and record it in the monitor.
    Interrupts are disabled from the TXE wait through the TDR write, so this cannot race the TDR
    write in Thru (ISR). That lasts 320us at most, and the host is waiting for the VCP reply and
-   sends nothing, so USART2 loses nothing. Note: in latch mode U108 disables the MIDI-OUT driver, so nothing reaches the wire */
+   sends nothing, so USART2 loses nothing.
+   Latch mode (DIP-SW3 OFF) sends nothing: the byte would appear on the J104 Tip and PF0 would take it
+   for a footswitch press. The MSEND handler rejects the command first; this check is the backstop. */
 static void midi_inject_byte(uint8_t b)
 {
+    if (!dip_sw3) return;
     __disable_irq();
     while (!(USART1->ISR & USART_ISR_TXE)) { }
     USART1->TDR = b;
@@ -1485,9 +1543,13 @@ static void dbg_exit(void)
 {
     dbg_active = false;
 
+    /* DBG may have written PB5 (W PB5 0 removes the Tip pull-up), so restore it and let Tip settle
+       before the latch inputs are re-read */
+    update_mode_pb5();
+    HAL_Delay(LATCH_PULLUP_SETTLE_MS);
+
     /* Re-snapshot the inputs (same approach as on a dip_sw3 change) */
-    prev_latch_tip  = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_0);
-    prev_latch_ring = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_1);
+    latch_snapshot();       /* PF0/PF1 + Tip debounce state */
     prev_bias_pos1  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_2);
     prev_bias_pos3  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3);
     prev_resp_pos1  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);
@@ -1507,8 +1569,8 @@ static void dbg_exit(void)
        Clear it explicitly on exit, or Active Sensing would be held back for no reason */
     thru_idle_ms     = 0;
 
-    /* Restore the outputs to the normal control state (update_signal_path also refreshes bias/response/filter) */
-    update_mode_pb5();
+    /* Restore the outputs to the normal control state (update_signal_path also refreshes bias/response/filter).
+       PB5 was restored above, before the re-snapshot */
     update_signal_path();
     led_update_needed = 1;  /* update_led() + ws_send() on the next loop */
 }
@@ -1654,7 +1716,15 @@ static void poll_debug_uart(void)
         dbg_cmd_learn();
     } else if (strcmp(tok[0], "MSEND") == 0) {
         /* MSEND <hex> [hex...] - send an arbitrary byte sequence to MIDI-OUT (no DBG mode needed).
-           All tokens are validated first, so a bad one never leaves a partial message on the wire */
+           All tokens are validated first, so a bad one never leaves a partial message on the wire.
+           Latch mode (DIP-SW3 OFF) replies "ERR LATCH" and sends nothing (see midi_inject_byte).
+           The arguments are checked before the mode, so a malformed command gets "ERR ARG" in
+           either mode.
+           Known limit in DBG mode: the main loop skips the DIP poll while DBG is ON, so dip_sw3
+           keeps the value it had when DBG was entered. If DBG was entered in MIDI mode and SW3 is
+           then turned OFF, this check and the one in midi_inject_byte still pass, and the bytes
+           reach the J104 Tip. Thru (thru_send_byte) keeps running in DBG mode behind the same
+           stale flag. The next DIP poll after DBG OFF picks up the new SW3 position. */
         if (ntok < 2) { dbg_send_str("ERR ARG\r\n"); return; }
         uint8_t bytes[11];
         for (int i = 1; i < ntok; i++) {
@@ -1666,6 +1736,7 @@ static void poll_debug_uart(void)
             }
             bytes[i - 1] = (uint8_t)v;
         }
+        if (!dip_sw3) { dbg_send_str("ERR LATCH\r\n"); return; }
         for (int i = 0; i < ntok - 1; i++) {
             midi_inject_byte(bytes[i]);
         }
@@ -1674,7 +1745,7 @@ static void poll_debug_uart(void)
     } else if (strcmp(tok[0], "MRECV") == 0) {
         /* MRECV <hex> [hex...] - simulate MIDI-IN reception by injecting into the parser (no DBG mode needed).
            The effect is applied by the normal control loop (poll_midi), so use it with DBG OFF.
-           Toggle and on/off control only take effect in MIDI mode (DIP-SW3 ON). */
+           Toggle and on/off control take effect in either DIP-SW3 position (MIDI-IN is always live). */
         if (ntok < 2) { dbg_send_str("ERR ARG\r\n"); return; }
         uint8_t bytes[11];
         for (int i = 1; i < ntok; i++) {
@@ -1774,7 +1845,7 @@ void HAL_SYSTICK_Callback(void)
     }
 
     /* Heartbeat LED PC14 - blinks continuously with a 1s period.
-       PC14 is inverted by the 74HCT04 (4A) and also drives D115, so D114 and D115 alternate */
+       PC14 drives D114 only (v1.1 removed D115, the inverted twin that the 74HCT04 used to drive) */
     if (++startup_blink_ms >= STARTUP_BLINK_MS) {
         startup_blink_ms = 0;
         startup_blink_phase = !startup_blink_phase;
@@ -1871,9 +1942,13 @@ int main(void)
   dip_sw3 = (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6)  == GPIO_PIN_RESET);
   dip_sw4 = (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_RESET);
 
+  /* PB5: connect the Tip pull-up (latch mode) before the snapshot below reads Tip, then let it settle.
+     MX_GPIO_Init leaves PB5 Low, so reading first would sample a Tip with no pull-up. */
+  update_mode_pb5();
+  HAL_Delay(LATCH_PULLUP_SETTLE_MS);
+
   /* Initial input snapshot */
-  prev_latch_tip  = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_0);
-  prev_latch_ring = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_1);
+  latch_snapshot();       /* PF0/PF1 + Tip debounce state */
   prev_bias_pos1  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_2);
   prev_bias_pos3  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3);
   prev_resp_pos1  = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);
@@ -1895,9 +1970,7 @@ int main(void)
     effect_active = true;
   }
 
-  /* PB5: latch/MIDI mode select output */
-  update_mode_pb5();
-
+  /* PB5 was already set before the input snapshot */
   update_signal_path();
   update_led();
   ws_send();
@@ -1913,7 +1986,7 @@ int main(void)
       power_good ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
   /* VCP debug console: boot banner, to confirm the board is alive after flashing */
-  dbg_send_str("BOOT anthracite-06 dbg v2 EDLY=5800us\r\n");
+  dbg_send_str("BOOT anthracite-" FW_VERSION " dbg v2 EDLY=5800us\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -1940,16 +2013,15 @@ int main(void)
     }
     if (new_dip_sw3 != dip_sw3) {
       dip_sw3 = new_dip_sw3;
-      update_mode_pb5(); /* PB5: latch/MIDI mode */
+      update_mode_pb5(); /* PB5: Tip pull-up on in latch mode, off in MIDI mode */
+      HAL_Delay(LATCH_PULLUP_SETTLE_MS); /* let Tip settle before reading it */
       /* Re-snapshot latch inputs to avoid a false trigger on mode re-entry */
-      prev_latch_tip  = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_0);
-      prev_latch_ring = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_1);
+      latch_snapshot();       /* PF0/PF1 + Tip debounce state */
     }
     if (new_dip_sw4 != dip_sw4) {
       dip_sw4 = new_dip_sw4; /* latch mode <-> momentary mode */
       /* Re-snapshot latch inputs to avoid a false trigger on the mode change */
-      prev_latch_tip  = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_0);
-      prev_latch_ring = HAL_GPIO_ReadPin(GPIOF, GPIO_PIN_1);
+      latch_snapshot();       /* PF0/PF1 + Tip debounce state */
     }
 
     poll_latch_input();
@@ -2385,7 +2457,17 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
    Hardware notes:
      - PB15 is the Response Gradual output.
        The NJW4191 OSC pin is tied to GND, the correct configuration when no external clock is used.
-     - PC14 also drives D115 through the 74HCT04 (4A->4Y), so D114 and D115 blink in opposite phase.
+     - PC14 drives the heartbeat LED D114. Up to v1.0 it also drove D115 in opposite phase through
+       the 74HCT04 (4A->4Y); v1.1 removed D115 and reassigned the 74HCT04 gates (MIDI-OUT, PB5).
+     - MIDI-OUT (v1.1): PB6 -> R123 -> U107 (1->2->3->4, non-inverting) -> D118 cathode, anode -> R128
+       -> J104 Tip. The latch input PF0 reads the same Tip, and no hardware gate disables MIDI-OUT in
+       latch mode, so Thru, Active Sensing and MSEND are all held off while DIP-SW3 is OFF.
+       PB6 gets the internal pull-up in the USART1 MSP init (.ioc stays NOPULL; USER CODE overrides it).
+       It is a safeguard for while TE=0 after that init; with TE=1 the USART drives PB6 High at idle.
+       It cannot hold PB6 between reset and the MSP init; that needs an external pull-up (a candidate
+       for a later board revision).
+     - PB5 (through U107) switches three things together: U109 (latch Tip pull-up, R127 3k3 + R144 470),
+       U110 (the MIDI-mode Ring current source, closed when PB5 is Low) and D110 (lit when PB5 is High).
 */
 
 /* USER CODE END 4 */

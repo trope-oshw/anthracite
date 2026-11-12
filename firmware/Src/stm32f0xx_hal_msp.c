@@ -308,6 +308,20 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     /* USER CODE BEGIN USART1_MspInit 1 */
+    /* v1.1: PB6 (TX) drives the J104 Tip through U107 and D118, so a Low on PB6 pulls Tip Low.
+       Enable the internal pull-up on PB6 as a safeguard for the time after this MspInit while the
+       USART transmitter is disabled (TE=0). With TE=1 the USART drives PB6 push-pull and idles High,
+       so the pull-up does nothing then. It cannot cover reset -> this MspInit, when PB6 is still a
+       floating input; holding it High there needs an external pull-up (a candidate for a later
+       board revision).
+       The .ioc keeps PB6 at NOPULL (the generated block above) and this USER CODE block overrides
+       it, so a CubeMX regeneration does not lose the setting. */
+    GPIO_InitStruct.Pin = GPIO_PIN_6;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_PULLUP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF0_USART1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     /* USER CODE END USART1_MspInit 1 */
   }
