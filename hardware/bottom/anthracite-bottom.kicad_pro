@@ -890,16 +890,16 @@
     },
     "netclass_patterns": [
       {
-        "netclass": "GND",
-        "pattern": "GNDPWR"
-      },
-      {
         "netclass": "power",
         "pattern": "+*"
       },
       {
         "netclass": "power",
         "pattern": "-*"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GNDPWR"
       }
     ]
   },
@@ -1039,6 +1039,12 @@
           "label": "Description",
           "name": "Description",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Power",
+          "name": "Power",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1097,7 +1103,7 @@
         "uuid": "ca05477f-b90e-48cd-b2b9-72bab8d245c5"
       }
     ],
-    "used_designators": "",
+    "used_designators": "D118,R125,R144",
     "variants": []
   },
   "sheets": [
