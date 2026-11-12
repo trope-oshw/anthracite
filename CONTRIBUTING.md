@@ -1,45 +1,48 @@
+[日本語](CONTRIBUTING.ja.md)
+
 # Contributing
 
-Thanks for your interest in Anthracite.
+Thank you for your interest in Anthracite.
 
 ## Issues are welcome
 
-Bug reports, questions about the circuit, and anything in the documentation
-that does not match the hardware are all useful. Please include the **board
-version** (silkscreened on the PCB) and the **firmware version** when the
-problem could depend on either.
+Bug reports, questions about the circuit, and places where the documentation
+does not match the hardware are all welcome. If the problem may depend on the
+board or firmware version, please include the **board version** (see the PCB
+silkscreen) and the **firmware version**. That helps solve the problem faster.
 
-If you build your own version of this pedal, I would like to see it. Open an
-issue with photos.
+If you build this pedal yourself, Trope would love to see it. Open an issue
+with photos, or mention [@Mjm_12f](https://x.com/Mjm_12f) on X.
 
-## Pull requests to the hardware are not accepted
+## As a rule, Trope does not accept pull requests to the hardware
 
-Verifying a board change means ordering a board, populating it, and measuring
-it. I cannot do that for someone else's patch on a reasonable timescale, and
-merging a change I have not verified would put my name on hardware I cannot
-vouch for.
+Verifying a board change takes a lot of work, and Trope does not have the
+resources to verify patches from other people. To keep its products to a
+standard it can stand behind, Trope does not, as a rule, accept pull requests
+to the hardware.
 
-If you have a hardware improvement, please **open an issue describing it**, or
-build it yourself and tell me how it went. I will credit you either way.
+If you have a hardware improvement, please open an issue that describes it, or
+build it yourself and report the result in an issue. Either way, Trope credits
+you as a contributor.
 
 ## Pull requests to the firmware and documentation are welcome
 
-Typo fixes, clarifications, and translations especially.
+Typo fixes, clarifications, and translations are especially welcome.
 
-For firmware changes, note that Trope keeps the flash image of firmware 1.0.0,
-the version on shipped units, as it is. A change that alters the flash image
-goes into the next firmware version, which carries its own semantic version
-number.
+Any change to the firmware makes the flash image differ from the one on
+shipped units. A change that alters the flash image therefore gets a firmware
+version number of its own.
 
 ## What this project is
 
-Anthracite is designed and sold by one person. The design is open so that it
-can be studied, repaired, modified, and outlived by its author. It is not a
-community project with a roadmap, and I cannot promise to act on every
-suggestion. That is not indifference — it is the honest limit of a one-person
-operation.
+One person designs and sells Anthracite under the Trope name, sometimes with
+help from AI tools. The design is open so that anyone can learn from it,
+repair it, and modify it, and so that it lives on without its author. Trope
+cannot promise to act on every suggestion: one person running a business and
+a brand can only do so much. Thank you for understanding.
 
 ## Contact
 
-Issues are preferred, since the answer then helps the next person too.
-For anything that does not belong in public: trope.oshw@gmail.com
+Please use an issue whenever you can (Japanese is fine). An answer given in
+public helps other people too. For anything that does not belong in public,
+write to trope.oshw@gmail.com.
