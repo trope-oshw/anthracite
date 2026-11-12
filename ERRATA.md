@@ -6,11 +6,17 @@ but improve a board you already have.
 
 **This file is the right place to look if your board does not behave like the
 schematic says it should.** Design files are only corrected in the next
-revision — a fix to the source does not help someone holding a board that was
+revision. A fix to the source does not help someone holding a board that was
 already made. So problems found after a release are written down here instead.
 
 Each entry names the affected revision explicitly. If your board's revision is
 not listed, the entry does not apply to it.
+
+---
+
+## Anthracite v1.1
+
+No errata recorded yet.
 
 ---
 
@@ -71,7 +77,8 @@ used two 100 MΩ resistors in series in each position.
   the pedal in the same state. It should roughly halve; on the prototype it
   went from 956 µV to 506 µV.
 
-**In later revisions:** 200 MΩ is planned, but no revision or date is set.
+**In later revisions:** included in v1.1. R96 and R97 (100 MΩ) are in series
+with R38 and R86.
 
 ---
 
